@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security</title>
+<meta name="description" content="For cloud-native environments: Incident response plan Security risk management plan System security plan System security plan (annex) Standard operating procedures For hybrid environments: Incident response plan Security risk management plan System security plan System security plan (annex) Standard operating procedures...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/security.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Security">
+<meta property="og:description" content="For cloud-native environments: Incident response plan Security risk management plan System security plan System security plan (annex) Standard operating procedures For hybrid environments: Incident response plan Security risk management plan System security plan System security plan (annex) Standard operating procedures...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class="active"><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/index.html">Blueprint</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/overview.html">Solution overview</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/essential-eight-maturity.html">Essential Eight maturity</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/client-devices.html">Client devices</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/security.html">Security</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/automation.html">Automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abbr-acronyms.html">Abbreviations and Acronyms</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Security</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+< 1 minute
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>For cloud-native environments:</p>
+
+<ul>
+  <li><a href="/blueprint/security/incident-response-plan.html">Incident response plan</a></li>
+  <li><a href="/blueprint/security/security-risk-management-plan.html">Security risk management plan</a></li>
+  <li><a href="/blueprint/security/system-security-plan.html">System security plan</a></li>
+  <li><a href="/assets/files/security/system-security-plan-annex.xlsx">System security plan (annex)</a></li>
+  <li><a href="/blueprint/security/standard-operating-procedures.html">Standard operating procedures</a></li>
+</ul>
+
+<p>For hybrid environments:</p>
+
+<ul>
+  <li><a href="/blueprint/security/hybrid-incident-response-plan.html">Incident response plan</a></li>
+  <li><a href="/blueprint/security/hybrid-security-risk-management-plan.html">Security risk management plan</a></li>
+  <li><a href="/blueprint/security/hybrid-system-security-plan.html">System security plan</a></li>
+  <li><a href="/assets/files/security/hybrid-system-security-plan-annex.xlsx">System security plan (annex)</a></li>
+  <li><a href="/blueprint/security/hybrid-standard-operating-procedures.html">Standard operating procedures</a></li>
+</ul>
+
+<p>For both:</p>
+
+<ul>
+  <li><a href="/blueprint/security/cloud-assessment-and-authorisation-alignment.html">Cloud assessment and authorisation alignment</a></li>
+  <li><a href="/blueprint/security/continuous-monitoring-plan.html">Continuous monitoring plan</a></li>
+</ul>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

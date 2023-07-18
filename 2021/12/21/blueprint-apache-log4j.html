@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The blueprint and Apache Log4j</title>
+<meta name="description" content="The following is an advisory for the recent Apache Log4j vulnerabilities (CVE-2021-44228) identified in December 2021.">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/2021/12/21/blueprint-apache-log4j.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="The blueprint and Apache Log4j">
+<meta property="og:description" content="The following is an advisory for the recent Apache Log4j vulnerabilities (CVE-2021-44228) identified in December 2021.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-md-9">
+                    <div id="content-area">
+                        <h1>The blueprint and Apache Log4j</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+1 minute
+
+to read</li>
+                                <li>21 December 2021 (updated 17 July 2023)</li>
+                            </ul>
+                        </div>
+                        <p>The following is an advisory for the recent Apache Log4j vulnerabilities (<a href="https://logging.apache.org/log4j/2.x/security.html">CVE-2021-44228</a>) identified in December 2021.</p>
+
+<h2 id="is-the-protected-utility-blueprint-affected">Is the Protected Utility blueprint affected?</h2>
+
+<p>No.</p>
+
+<p>The blueprint does not directly make use of Apache Log4j in its implementation of Microsoft 365. It also does not call out any third-party applications that utilise it either.</p>
+
+<h2 id="is-microsoft-365-affected">Is Microsoft 365 affected?</h2>
+
+<p>No.</p>
+
+<p>At this stage, Microsoft 365 has not been identified to be affected. Please visit <a href="https://msrc-blog.microsoft.com/2021/12/11/microsofts-response-to-cve-2021-44228-apache-log4j2/">Microsoft’s response to CVE-2021-44228</a> for a list of affected Microsoft products and services.</p>
+
+<h2 id="is-there-anything-we-can-do-to-improve-our-security-posture">Is there anything we can do to improve our security posture?</h2>
+
+<p>Yes!</p>
+
+<p>Defender for Endpoint is part of the blueprint and provides both detection and response capabilities for the Log4j vulnerabilities. This includes both finding vulnerable versions and responding to exploit attempts.</p>
+
+<p>Please follow Microsoft’s <a href="https://www.microsoft.com/security/blog/2021/12/11/guidance-for-preventing-detecting-and-hunting-for-cve-2021-44228-log4j-2-exploitation/">guidance on preventing, detecting and hunting for CVE-2021-44228</a>.</p>
+
+<p>Please note Defender for Endpoint requires E5 licensing.</p>
+
+<h2 id="deviations-from-the-blueprint">Deviations from the blueprint</h2>
+
+<p>If your implementation of the Protected Utility blueprint differs from our recommendations (eg additional services and applications are used), you will need to assess that your deviations are also not affected by the vulnerabilities.</p>
+
+<h2 id="further-information">Further information</h2>
+
+<ul>
+  <li><a href="https://www.cyber.gov.au/acsc/view-all-content/alerts/critical-remote-code-execution-vulnerability-found-apache-log4j2-library">ACSC’s advisory</a></li>
+</ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

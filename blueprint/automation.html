@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Automation</title>
+<meta name="description" content="Microsoft offers programmatic and manual methods to getting and setting configuration within Microsoft Azure and Microsoft 365. This document focuses on the programmatic configuration utilising Microsoft 365 Desired State Configuration (M365DSC). M365DSC is an open source tool hosted on GitHub...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/automation.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Automation">
+<meta property="og:description" content="Microsoft offers programmatic and manual methods to getting and setting configuration within Microsoft Azure and Microsoft 365. This document focuses on the programmatic configuration utilising Microsoft 365 Desired State Configuration (M365DSC). M365DSC is an open source tool hosted on GitHub...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class="active"><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/index.html">Blueprint</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/overview.html">Solution overview</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/essential-eight-maturity.html">Essential Eight maturity</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/client-devices.html">Client devices</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/security.html">Security</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/automation.html">Automation</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                <ul class="nav au-link-list"><li><a href="#windows-powershell-desired-state-configuration">Windows PowerShell Desired State Configuration</a></li><li><a href="#scope">Scope</a></li><li><a href="#identity-and-access-management">Identity and access management</a></li><li><a href="#exchange-online">Exchange Online</a></li><li><a href="#microsoft-365-desired-state-configuration-implementation-procedure">Microsoft 365 Desired State Configuration implementation procedure</a><ul><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#procedure">Procedure</a><ul><li><a href="#configuration-file-development">Configuration file development</a><ul><li><a href="#configuration-data-file">Configuration data file</a></li><li><a href="#blueprint-configuration-scripts">Blueprint configuration scripts</a></li></ul></li><li><a href="#certificate-creation">Certificate creation</a></li><li><a href="#configuration-deployment">Configuration deployment</a></li></ul></li><li><a href="#deployment-troubleshooting">Deployment troubleshooting</a></li></ul></li><li><a href="#microsoft-365-desired-state-configuration-auditing-procedure">Microsoft 365 Desired State Configuration auditing procedure</a><ul><li><a href="#prerequisites-1">Prerequisites</a></li><li><a href="#procedure-1">Procedure</a></li><li><a href="#blueprint-audit-baseline">Blueprint audit baseline</a></li></ul></li></ul>
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abbr-acronyms.html">Abbreviations and Acronyms</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Automation</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+14 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>Microsoft offers programmatic and manual methods to getting and setting configuration within Microsoft Azure and Microsoft 365. This document focuses on the programmatic configuration utilising <a href="https://microsoft365dsc.com/">Microsoft 365 Desired State Configuration (M365DSC)</a>. M365DSC is an open source tool hosted on GitHub and maintained by Microsoft engineers and the community. It is able to configure settings within all major Microsoft 365 workloads such as Exchange Online, Teams, Power Platforms, SharePoint and Security and Compliance. A list of configurable resources within these workloads is available on the <a href="https://github.com/Microsoft/Microsoft365DSC/wiki/Resources-List">M365DSC website</a>. M365DSC leverages Windows PowerShell Desired State Configuration.</p>
+
+<p>Currently, M365DSC is not able to fully configure a tenant to the specifications outlined in the blueprint. Configurations that cannot be configured via this method may need to be configured either manually or via another method such as the native M365 configuration PowerShell modules outside of DSC or Azure Command Line Interface.</p>
+
+<h2 id="windows-powershell-desired-state-configuration">Windows PowerShell Desired State Configuration</h2>
+
+<p>Windows PowerShell Desired State Configuration is a feature of PowerShell version 4.0 and later. It leverages a Configuration Script, Resources, and the <a href="https://docs.microsoft.com/en-us/powershell/scripting/dsc/managing-nodes/metaconfig?view=powershell-7.1">Local Configuration Manager</a> on a Windows machine.</p>
+
+<p>The Configuration Script is a declarative PowerShell script which defines and configures resource instances. Resources contain the code required to configure and maintain the configuration in a specified state. The Local Configuration Manager is the engine which facilitates the interaction between resources and configurations.</p>
+
+<p>Windows PowerShell Desired State Configuration can be leveraged to implement and ensure configurations are maintained in their preferred state. The Local Configuration Manager can be configured to poll the configuration on a set time interval and alert or re-enforce if configuration drift has occurred. For details regarding the Local Configuration Manager on a computer, run the following command in a PowerShell console:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-DscLocalConfigurationManager</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="scope">Scope</h2>
+
+<p>The following blueprint components are available for automation. We hope to expand this list over time as the options mature. If you would like your script included in the blueprint, please let us know by raising a <a href="https://github.com/govau/desktop.gov.au/issues">ticket in GitHub</a>.</p>
+
+<ul>
+  <li>Identity and access management</li>
+  <li>Exchange Online</li>
+</ul>
+
+<h2 id="identity-and-access-management">Identity and access management</h2>
+
+<p>The following table outlines the subsections of the blueprint and their automation status for identity and access management.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Automated / Manual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Conditional Access</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Group Naming Policy</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Groups Settings</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Group Lifecycle Policy</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Group Creation</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Sensitivity labels</td>
+      <td>Automated (separate DSC script)</td>
+    </tr>
+    <tr>
+      <td>Directory Contact Details</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>User Settings</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Device Settings</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>External Collaboration</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Custom Domains</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Company Branding</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Group Creation Restrictions</td>
+      <td><a href="/blueprint/abac/platform.html#delegate-office-365-group-creation">Platform ABAC - delegate 365 group creation script</a></td>
+    </tr>
+    <tr>
+      <td>Azure Active Directory Connect (if applicable)</td>
+      <td>Manual</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="exchange-online">Exchange Online</h2>
+
+<p>The following table outlines the subsections of the blueprint and their automation status for Exchange Online. Configuration of Exchange Online is completed after identity and access management.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Automated / Manual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Connectors</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>DKIM</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Accepted domains</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Remote domains (Default)</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>CAS mailbox plan</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Per mailbox attributes</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Authentication policy</td>
+      <td><a href="/blueprint/abac/office-365.html#authentication-policy">Office 365 ABAC - authentication policy</a></td>
+    </tr>
+    <tr>
+      <td>Outlook Web Access policy</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Mailbox archive</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Mailbox auditing</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Mailflow rules</td>
+      <td>Manual</td>
+    </tr>
+    <tr>
+      <td>Anti-spam connection filter</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Anti-spam policies</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Anti-malware policies</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Anti-phishing policies</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Safe-links and Safe attachments</td>
+      <td>Automated</td>
+    </tr>
+    <tr>
+      <td>Hybrid configuration</td>
+      <td>Manual</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="microsoft-365-desired-state-configuration-implementation-procedure">Microsoft 365 Desired State Configuration implementation procedure</h2>
+
+<p>The following procedure is to <strong>implement</strong> a configuration using Microsoft 365 Desired State Configuration.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>An account with Global Administrator privileges</li>
+  <li>Pre-creation of the break glass/emergency admin accounts</li>
+  <li>An account with a PowerShell execution policy of unrestricted</li>
+  <li>A device with PowerShell Remoting enabled, internet access, and PowerShell 4.0 or greater installed</li>
+  <li>Microsoft Graph for PowerShell app registration is available in the Azure AD tenant</li>
+  <li>Device with WinRM configured with a HTTPS listener</li>
+</ul>
+
+<h3 id="procedure">Procedure</h3>
+
+<p>The process to enforce a Microsoft 365 Desired State Configuration (M365DSC) can be broken down into 3 parts:</p>
+
+<ol>
+  <li>Configuration file development</li>
+  <li>Certificate creation</li>
+  <li>Configuration deployment</li>
+</ol>
+
+<p>If the certificate creation part is skipped, the configuration file (MOF file) will contain credentials in <strong>clear text</strong>. Also the <code class="language-plaintext highlighter-rouge">CertificateFile</code> value within <code class="language-plaintext highlighter-rouge">configurationdata.psd1</code> would require removal.</p>
+
+<h4 id="configuration-file-development">Configuration file development</h4>
+
+<p>The configuration files developed in accordance with the blueprint are available below. The configuration data file is required no matter the configuration script used.</p>
+
+<h5 id="configuration-data-file">Configuration data file</h5>
+
+<p>The required <code class="language-plaintext highlighter-rouge">configurationdata.psd1</code> file for the M365DSC methods can be downloaded below:</p>
+
+<ul>
+  <li><a href="/assets/files/automation/configurationdata.txt">configurationdata.psd1</a></li>
+</ul>
+
+<h5 id="blueprint-configuration-scripts">Blueprint configuration scripts</h5>
+
+<p>Blueprint configuration scripts are available in the table below.</p>
+
+<p>Note, each DSC script can be ran independently.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Script</th>
+      <th>Configuration items</th>
+      <th>Method</th>
+      <th>Script parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="/assets/files/automation/identity_dsc.txt">identity_dsc.ps1</a></td>
+      <td>Conditional Access<br />Group Naming Policy<br />Named Locations<br />Group Lifecycle Policy<br />Group Creation<br />Groups Settings<br />Directory Contact Details</td>
+      <td>M365DSC</td>
+      <td>-trustedip<br />-agency <br />-agencyprefix<br />-globaladminaccount<br />-technicalcontactemail<br />-technicalcontactphone<br /></td>
+    </tr>
+    <tr>
+      <td><a href="/assets/files/automation/sensitivity-labels_dsc.txt">sensitivity-labels_dsc.ps1</a></td>
+      <td>Sensitivity labels</td>
+      <td>M365DSC</td>
+      <td>-globaladminaccount</td>
+    </tr>
+    <tr>
+      <td><a href="/assets/files/automation/exo_dsc.txt">exo_dsc.ps1</a></td>
+      <td>Anti-spam policies<br />Anti-malware policies<br />Anti-phishing policies<br />Safe-links and Safe attachments<br />Outlook Web Access policy<br />CAS mailbox plan</td>
+      <td>M365DSC</td>
+      <td>-gatewayip<br />-agency <br />-globaladminaccount<br />-technicalcontactemail</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="certificate-creation">Certificate creation</h4>
+
+<p>The process to create a certificate is as follows:</p>
+
+<ol>
+  <li>Open a PowerShell console as administrator</li>
+  <li>Install and import the PowerShell module <code class="language-plaintext highlighter-rouge">microsoft365dsc</code> using the following command:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">install-module</span><span class="w"> </span><span class="nx">microsoft365dsc</span><span class="w"> </span><span class="nt">-allowclobber</span><span class="w"> </span><span class="nt">-force</span><span class="w">
+</span><span class="n">import-module</span><span class="w"> </span><span class="nx">microsoft365dsc</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>In PowerShell navigate to the directory containing the blueprint configuration PS1 file and the <code class="language-plaintext highlighter-rouge">configurationdata.psd1</code> file</li>
+  <li>Create a Desired State Configuration local configuration manager certificate:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-M365DSCAgentCertificateConfiguration</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Validate that a certificate was created and assigned to the local configuration manager by matching the output of step 4 with <code class="language-plaintext highlighter-rouge">CertificateID</code> from the following:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-DscLocalConfigurationManager</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Export the certificate into the folder containing the blueprint configuration PS1 file and the <code class="language-plaintext highlighter-rouge">configurationdata.psd1</code> file
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$certificatethumbprint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-DscLocalConfigurationManager</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">select</span><span class="w"> </span><span class="nx">CertificateID</span><span class="w">
+</span><span class="nv">$certpath</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="s2">"cert:\localmachine\My\"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$certificatethumbprint</span><span class="o">.</span><span class="nf">CertificateID</span><span class="w">
+</span><span class="nv">$cert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="nt">-path</span><span class="w"> </span><span class="nv">$certpath</span><span class="w">
+</span><span class="n">Export-Certificate</span><span class="w"> </span><span class="nt">-Cert</span><span class="w"> </span><span class="nv">$cert</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="o">.</span><span class="nx">\M365dsc_DER.cer</span><span class="w">
+</span><span class="n">certutil</span><span class="w"> </span><span class="nt">-encode</span><span class="w"> </span><span class="nx">M365dsc_DER.cer</span><span class="w"> </span><span class="nx">m365dsc.cer</span><span class="w">
+</span><span class="n">remove-item</span><span class="w"> </span><span class="o">.</span><span class="nx">\M365dsc_DER.cer</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ol>
+
+<h4 id="configuration-deployment">Configuration deployment</h4>
+
+<p>The process to deploy the configuration is as follows:</p>
+
+<ol>
+  <li>Open a PowerShell console as administrator</li>
+  <li>Install and import the PowerShell module microsoft365dsc using the following command:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-WSManQuickConfig</span><span class="w">
+</span><span class="nx">install-module</span><span class="w"> </span><span class="nx">microsoft365dsc</span><span class="w"> </span><span class="nt">-allowclobber</span><span class="w"> </span><span class="nt">-force</span><span class="w">
+</span><span class="n">import-module</span><span class="w"> </span><span class="nx">microsoft365dsc</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>In PowerShell navigate to the directory containing the blueprint configuration PS1 file and the <code class="language-plaintext highlighter-rouge">configurationdata.psd1</code> file. This <code class="language-plaintext highlighter-rouge">configurationdata.psd1</code>  file is the same for all other DSC scripts supplied</li>
+  <li>In the PowerShell console, initiate the desired blueprint configuration PS1 and supply the required values, this will create the MOF file for the local configuration manager. If the script requires parameters, the required values are located in the <code class="language-plaintext highlighter-rouge">param</code> section of the DSC script to be ran. Some DSC scripts may not require parameters, refer to the <code class="language-plaintext highlighter-rouge">Blueprint configuration scripts</code> table for an overview. The following is an example for the identity configuration DSC script <code class="language-plaintext highlighter-rouge">identity_dsc.ps1</code>. In this example, the required values are: Global Admin credentials; agency name; agency prefix; and trusted IPs (in CIDR format).
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$pscredential</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get-credential</span><span class="w">
+</span><span class="nv">$agencyname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AgencyName"</span><span class="w"> </span><span class="c"># note - agency internet domain name</span><span class="w">
+</span><span class="nv">$agencyprefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"AgencyAcronym"</span><span class="w">
+</span><span class="nv">$technicalcontactemail</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Agency.Helpdesk"</span><span class="w">  </span><span class="c"># note - recipient part of address</span><span class="w">
+</span><span class="nv">$technicalcontactphone</span><span class="w"> </span><span class="o">=</span><span class="s2">"+612111222"</span><span class="w">
+</span><span class="nv">$trustedIPs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@(</span><span class="s2">"X.X.X.X/X"</span><span class="p">,</span><span class="s2">"X.X.X.X/X"</span><span class="p">)</span><span class="w"> </span><span class="c"># note - for one CIDR range use @("X.X.X.X/X")</span><span class="w">
+</span><span class="o">.</span><span class="n">\identity_dsc.ps1</span><span class="w"> </span><span class="nt">-globaladminaccount</span><span class="w"> </span><span class="nv">$pscredential</span><span class="w"> </span><span class="nt">-trustedip</span><span class="w"> </span><span class="nv">$trustedIPs</span><span class="w"> </span><span class="nt">-agency</span><span class="w"> </span><span class="nv">$agencyname</span><span class="w"> </span><span class="nt">-agencyprefix</span><span class="w"> </span><span class="nv">$agencyprefix</span><span class="w"> </span><span class="nt">-technicalcontactemail</span><span class="w"> </span><span class="nv">$technicalcontactemail</span><span class="w"> </span><span class="nt">-technicalcontactphone</span><span class="w"> </span><span class="nv">$technicalcontactphone</span><span class="w"> 
+</span></code></pre></div>    </div>
+  </li>
+  <li><strong>This step will enforce the DSC configuration</strong>. Run the following command within the PowerShell console:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Start-DSCConfiguration</span><span class="w"> </span><span class="nx">M365TenantConfig</span><span class="w"> </span><span class="nt">-wait</span><span class="w"> </span><span class="nt">-verbose</span><span class="w"> </span><span class="nt">-force</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Validate the successful deployment by viewing changes in the appropriate Admin console (e.g Azure Active Directory or M365 compliance)</li>
+  <li>In the PowerShell console, run the following command to ensure the configuration is no longer enforced via the Desired State Configuration Local Configuration Manager
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Remove-DscConfigurationDocument</span><span class="w"> </span><span class="nt">-stage</span><span class="w"> </span><span class="nx">current</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Repeat the process for other DSC scripts, each can be ran without overlapping configuration</li>
+</ol>
+
+<h3 id="deployment-troubleshooting">Deployment troubleshooting</h3>
+
+<p>The following provides some common errors that might be encountered using the M365DSC and suggested remedy steps.</p>
+
+<p>Additional guidance and troubleshooting information can be found in the M365DSC <a href="https://github.com/Microsoft/Microsoft365DSC/wiki">wiki</a>.</p>
+
+<p><strong>Issue 1 - error:</strong> <em>Undefined DSC resource ‘M365DSCResource’. Use Import-DSCResource to import the resource. Resource ‘break.glass_priv1@domain does not exist or one of its  queried reference-property objects are not present.</em></p>
+
+<p><strong>Issue 1 - remedy:</strong> Ensure that  the emergency access admin account (break glass) identities exist prior to running the DSC script</p>
+
+<ul>
+  <li>Check or create each emergency access admin account manually as per the the <a href="/blueprint/abac/platform.html#emergency-access-admin-accounts">Platform - ABAC </a></li>
+</ul>
+
+<p><strong>Issue 2 - error:</strong> <em>Undefined DSC resource ‘M365DSCResource’. Use Import-DSCResource to import the resource.</em></p>
+
+<p><strong>Issue 2 - remedy:</strong> Confirm the M365DSC module versioning installed on the system and load the desired module</p>
+
+<ul>
+  <li>The module version defined in the DSC script does not match the version installed on the system. Either remove the <code class="language-plaintext highlighter-rouge">-version</code> parameter on the <code class="language-plaintext highlighter-rouge">Import-DscResource</code> command or change the version to match the version installed.</li>
+  <li>If there are multiple versions of the M365DSC, import the required version
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Microsoft365DSC</span><span class="w"> </span><span class="nt">-ListAvailable</span><span class="w"> </span><span class="o">|</span><span class="n">Select</span><span class="w"> </span><span class="nx">Version</span><span class="w"> </span><span class="c">#list available versions</span><span class="w">
+</span><span class="n">Import-Module</span><span class="w"> </span><span class="nt">-FullyQualifiedName</span><span class="w"> </span><span class="p">@{</span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Microsoft365DSC"</span><span class="p">;</span><span class="w"> </span><span class="nx">ModuleVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"version"</span><span class="p">}</span><span class="w"> </span><span class="c">#import desired version</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Issue 3 - error:</strong> <em>Running the Get-Command command in a remote session reported the following error: Processing data for a remote command failed with the following error message: The SSL connection cannot be established</em></p>
+
+<p><strong>Issue 3 - remedy:</strong> Ensure the local WinRM agent is configured and listening on HTTPS</p>
+
+<ul>
+  <li>Confirm WinRM is setup for HTTPS. For further information, see <a href="https://docs.microsoft.com/en-us/troubleshoot/windows-client/system-management-components/configure-winrm-for-https">How to configure WINRM for HTTPS - Microsoft Docs</a></li>
+  <li>Confirm inbound Firewall port is open on 5586
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$port</span><span class="o">=</span><span class="mi">5986</span><span class="w">
+</span><span class="n">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"Windows Remote Management (HTTPS-In)"</span><span class="w"> </span><span class="n">dir</span><span class="o">=</span><span class="kr">in</span><span class="w"> </span><span class="n">action</span><span class="o">=</span><span class="n">allow</span><span class="w"> </span><span class="nx">protocol</span><span class="o">=</span><span class="n">TCP</span><span class="w"> </span><span class="nx">localport</span><span class="o">=</span><span class="nv">$port</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>Issue 4 - error:</strong> <em>You cannot perform the requested operation, required scopes are missing in the token</em></p>
+
+<p><strong>Issue 4 - remedy:</strong> Ensure that the required API permissions for the Microsoft Graph for PowerShell are granted admin consent</p>
+
+<ul>
+  <li>Connect with the Microsoft Graph API and grant admin consent when prompted
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Connect-MgGraph</span><span class="w"> </span><span class="nt">-TenantId</span><span class="w"> </span><span class="s2">"Azure AD tenant id guid"</span><span class="w"> </span><span class="nt">-Scopes</span><span class="w"> </span><span class="s2">"Application.Read.All,Group.Read.All,Directory.Read.All,Policy.Read.All,Policy.Read.ConditionalAccess,Policy.ReadWrite.ConditionalAccess,RoleManagement.Read.All,RoleManagement.Read.Directory,User.Read.All"</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="microsoft-365-desired-state-configuration-auditing-procedure">Microsoft 365 Desired State Configuration auditing procedure</h2>
+
+<p>The following procedure is to <strong>audit</strong> a configuration using Microsoft 365 Desired State Configuration.</p>
+
+<h3 id="prerequisites-1">Prerequisites</h3>
+
+<ul>
+  <li>An account with Global Administrator privileges</li>
+  <li>A device with PowerShell Remoting enabled, internet access, and PowerShell 4.0 or greater installed</li>
+  <li>An account with a PowerShell execution policy of unrestricted</li>
+</ul>
+
+<h3 id="procedure-1">Procedure</h3>
+
+<p>The process to audit a tenant based on the blueprints Microsoft 365 Desired State Configuration (M365DSC) is as follows:</p>
+
+<ol>
+  <li>Download <a href="/assets/files/automation/baseline.txt">baseline.ps1</a></li>
+  <li>Within <code class="language-plaintext highlighter-rouge">baseline.ps1</code>, update any agency specific items (e.g. all areas where agency name is specified)</li>
+  <li>Open a PowerShell console as administrator and navigate to the directory containing the <code class="language-plaintext highlighter-rouge">baseline.ps1</code> file</li>
+  <li>Run the following command in the PowerShell console:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$outputlocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"\Blueprint_Comparison </span><span class="si">$(</span><span class="err">$</span><span class="p">(</span><span class="n">Get-Date</span><span class="p">)</span><span class="o">.</span><span class="nf">ToString</span><span class="p">(</span><span class="se">`"</span><span class="nx">yyyy-MM-dd</span><span class="w"> </span><span class="nx">hhmmss</span><span class="se">`"</span><span class="p">)</span><span class="si">)</span><span class="s2">.html"</span><span class="w">
+</span><span class="n">Assert-M365DSCBlueprint</span><span class="w"> </span><span class="nt">-BluePrintUrl</span><span class="w"> </span><span class="o">.</span><span class="nx">\baseline.ps1</span><span class="w"> </span><span class="nt">-OutputReportPath</span><span class="w"> </span><span class="nv">$outputlocation</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Review the html report to evaluate the configuration against the blueprint</li>
+</ol>
+
+<h3 id="blueprint-audit-baseline">Blueprint audit baseline</h3>
+
+<p>Blueprint audit baselines are available below:</p>
+
+<ul>
+  <li><a href="/assets/files/automation/baseline.txt">baseline.ps1</a></li>
+</ul>
+
+<p>The above baseline requires updating to include agency specific details prior to use.</p>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

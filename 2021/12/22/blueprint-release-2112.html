@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blueprint release 2112</title>
+<meta name="description" content="We are excited to announce the next release of the Protected Utility blueprint (version 2112). Some noteworthy changes from the previous June release include:">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/2021/12/22/blueprint-release-2112.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Blueprint release 2112">
+<meta property="og:description" content="We are excited to announce the next release of the Protected Utility blueprint (version 2112). Some noteworthy changes from the previous June release include:">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-md-9">
+                    <div id="content-area">
+                        <h1>Blueprint release 2112</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+2 minutes
+
+to read</li>
+                                <li>22 December 2021 (updated 17 July 2023)</li>
+                            </ul>
+                        </div>
+                        <p>We are excited to announce the next release of the Protected Utility blueprint (version 2112). Some noteworthy changes from the previous June release include:</p>
+
+<ul>
+  <li>Incorporated the September Information Security Manual (ISM) updates.</li>
+  <li>Incorporated October ACSC reference updates (eg Apple iOS, Microsoft Office Hardening, Windows Hardening and more).</li>
+  <li>The <a href="/blueprint/security/continuous-monitoring-plan.html">Continuous Monitoring Plan</a> is more blueprint specific.</li>
+  <li>Replaced security baselines to better comply with ACSC hardening guidance.</li>
+  <li><a href="/blueprint/client-devices.html#web-advertisement-blocking">Browser based web advertisement blocking</a> makes an appearance.</li>
+  <li>2018.4 PSPF labelling update.</li>
+  <li>Continued scripting to include sensitivity labels and parts of Exchange Online.</li>
+  <li>Consolidated the number of As-Built-As-Configured documents down from 24 to 11 documents.</li>
+  <li>Plenty of other changes.</li>
+</ul>
+
+<p>A full list of changes can be found in the release notes on <a href="https://github.com/govau/desktop.gov.au/releases/tag/2112">Github</a> where you can also <a href="https://github.com/govau/desktop.gov.au/compare/2106...2112">compare with the previous release</a>.</p>
+
+<h2 id="essential-eight-e8">Essential Eight (E8)</h2>
+
+<p>A large part of the release was related to the Essential Eight. After incorporating the July 2021 E8 updates, we turned our focus to expanding the detail and rationale. In this process, we were also able to increase the maturity of <strong><em>user application hardening</em></strong> from 2 to 3. Additionally, we no longer provide a score for <strong><em>regular backups</em></strong> as we recognise the need for agencies to implement this based on their unique business continuity requirements.</p>
+
+<p>For full details, head on over to the now standalone <a href="/blueprint/essential-eight-maturity.html">Essential Eight page</a>.</p>
+
+<h2 id="patterns">Patterns</h2>
+
+<p>Expanded the website to include a <a href="/patterns/">Patterns</a> area to house solutions that complement a blueprint Microsoft 365 environment. These patterns are not included in the blueprint’s security documentation suite. Patterns do not need to be hosted on our site, we can instead provide a link.</p>
+
+<p>The first pattern provides remote access using Azure Virtual Desktop (AVD). AVD is a PaaS offering that allows administrators to configure, deploy, and manage, scalable flexible solutions. AVD enables administrators to publish full desktops or remote apps. Corporations and departments are able to reduce the number of virtual machines and OS overhead while providing the same resources to users.</p>
+
+<h2 id="transition-to-bau">Transition to BAU</h2>
+
+<p>As the Program component of Protected Utility completed in June 2021, we have adjusted our website content to reflect this change.</p>
+
+<h2 id="feedback">Feedback</h2>
+
+<p>How did we do? Did we forget something important? Help us improve the blueprint by raising a <a href="https://github.com/govau/desktop.gov.au/issues">Github issue</a>.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

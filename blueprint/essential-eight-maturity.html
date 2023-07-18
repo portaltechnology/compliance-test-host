@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Essential Eight maturity</title>
+<meta name="description" content="The Essential Eight represents security guidance from the ACSC. It prioritises mitigation strategies to assist organisations in protecting their systems against a range of cyber threats. This section summarises the blueprint’s maturity level against the Essential Eight. It is important...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/essential-eight-maturity.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Essential Eight maturity">
+<meta property="og:description" content="The Essential Eight represents security guidance from the ACSC. It prioritises mitigation strategies to assist organisations in protecting their systems against a range of cyber threats. This section summarises the blueprint’s maturity level against the Essential Eight. It is important...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid e8" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class="active"><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/index.html">Blueprint</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/overview.html">Solution overview</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/essential-eight-maturity.html">Essential Eight maturity</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                <ul class="nav au-link-list"><li><a href="#application-control">Application control</a><ul><li><a href="#recommendations">Recommendations</a></li></ul></li><li><a href="#patch-applications">Patch applications</a><ul><li><a href="#recommendations-1">Recommendations</a></li></ul></li><li><a href="#configure-microsoft-office-macro-settings">Configure Microsoft Office macro settings</a><ul><li><a href="#recommendations-2">Recommendations</a></li></ul></li><li><a href="#user-application-hardening">User application hardening</a><ul><li><a href="#recommendations-3">Recommendations</a></li></ul></li><li><a href="#restrict-administrative-privileges">Restrict administrative privileges</a><ul><li><a href="#recommendations-4">Recommendations</a></li></ul></li><li><a href="#patch-operating-systems">Patch operating systems</a><ul><li><a href="#recommendations-5">Recommendations</a></li></ul></li><li><a href="#multi-factor-authentication">Multi-factor authentication</a><ul><li><a href="#recommendations-6">Recommendations</a></li></ul></li><li><a href="#regular-backups">Regular backups</a></li></ul>
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/client-devices.html">Client devices</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/security.html">Security</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/automation.html">Automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abbr-acronyms.html">Abbreviations and Acronyms</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Essential Eight maturity</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+17 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>The Essential Eight represents security guidance from the ACSC. It prioritises mitigation strategies to assist organisations in protecting their systems against a range of cyber threats.</p>
+
+<p>This section summarises the blueprint’s maturity level against the Essential Eight. It is important to note that any modifications outside of the blueprint will require a gap analysis to determine the security implications.</p>
+
+<p>The previous Essential Eight assessment for the DTA Protected Utility blueprint was performed in June 2020 against that version of the maturity model. This was documented in the <a href="https://github.com/govau/desktop.gov.au/blob/187a2f71f36578c2abc92d2072bda3119dafca43/blueprint/overview.md#essential-8-maturity">Solution Overview (June-2020)</a>.</p>
+
+<p>Since then, both the blueprint and Essential Eight have been updated by the DTA and the ACSC respectively. Additional functionality and capabilities have been added to the blueprint, and additional controls to the maturity model. Maturity level 0 has also been re-introduced to the Essential Eight.</p>
+
+<p>The assessments presented in this document includes Windows 10 and the supporting Microsoft 365 (M365) services as described in the blueprint. These assessments do not include iOS or any server infrastructure used by agencies to support the blueprint (e.g. in a hybrid deployment). The exclusion of iOS from this assessment is due to the following:</p>
+
+<blockquote>
+  <p>“The Essential Eight are designed to protect Microsoft Windows-based internet-connected networks. While the Essential Eight may be applied to cloud services and enterprise mobility… it was not primarily designed for such … In such cases, organisations should consider alternative guidance provided by the ACSC” - <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/essential-eight-maturity-model">Essential Eight Maturity Model (Oct-2021)</a>.</p>
+</blockquote>
+
+<p>The ACSC has provided an assessment of iOS devices against the Essential Eight in the <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/security-configuration-guide-apple-ios-14-devices">Security Configuration Guide - Apple iOS 14 Devices (Oct-2021)</a>.</p>
+
+<p>Server infrastructure used by agencies to support hybrid deployments of the blueprint are not included in this assessment as they are bespoke to those agencies. It is recommended that agencies operating a hybrid deployment of the blueprint perform their own Essential Eight assessments of supporting server infrastructure.</p>
+
+<table class="auto">
+  <thead>
+    <tr>
+      <th>Mitigation strategy</th>
+      <th>Maturity level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="#application-control">Application control</a></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><a href="#patch-applications">Patch applications</a></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><a href="#configure-microsoft-office-macro-settings">Configure Microsoft Office macro settings</a></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><a href="#user-application-hardening">User application hardening</a></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><a href="#restrict-administrative-privileges">Restrict administrative privileges</a></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><a href="#patch-operating-systems">Patch operating systems</a></td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td><a href="#multi-factor-authentication">Multi-factor authentication</a></td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td><a href="#regular-backups">Regular backups</a></td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Each of the individual assessments against the Essential Eight are described in detail in the following sections. These sections detail the rationale for each maturity level assessment, agency responsibilities, and recommendations to achieving greater maturity levels where applicable.</p>
+
+<h2 id="application-control">Application control</h2>
+
+<p class="maturity">Maturity level: 3</p>
+
+<p>Windows Defender Application Control (WDAC) is used for application control on Windows 10 devices within the blueprint. WDAC restricts the execution of executables, software libraries, scripts, drivers, and applications to an approved set, including code which runs in the system core (kernel). WDAC is managed via Microsoft Endpoint Manager (MEM) or via Group Policies, allowing applications deployed via MEM to also be added to the allowed list automatically.</p>
+
+<p>WDAC cannot manage control panel applets. Restricting control panel applets to an approved set is achieved in the blueprint through MEM configuration profiles or Group Policy.</p>
+
+<p>WDAC can also implement Microsoft’s latest <a href="https://docs.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-block-rules">recommended block rules</a> and <a href="https://docs.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/microsoft-recommended-driver-block-rules">driver block rules</a>.</p>
+
+<p>WDAC policies are also configured to enforce Constrained Language Mode (CLM) for Windows PowerShell, enforce the use of drivers signed by Windows Hardware Quality Labs (WHQL) and produced by partners who have an Extended Verification certificate, and block unsigned and unapproved scripts, MSIs, Universal Windows Store Applications, and .NET applications.</p>
+
+<p>Defender for Endpoint (which is enabled as part of the blueprint) can be used to centrally query WDAC events on all connected devices. Microsoft provides sample queries to assist with monitoring and alerting based on <a href="https://docs.microsoft.com/en-au/windows/security/threat-protection/windows-defender-application-control/querying-application-control-events-centrally-using-advanced-hunting">WDAC events</a>.</p>
+
+<p>For additional information on WDAC within the blueprint, see <a href="https://desktop.gov.au/blueprint/client-devices.html#windows-defender-application-control">Windows Defender Application Control</a>.</p>
+
+<p>As all required technical controls are implemented by the blueprint, the maturity level has been assessed at 3. Note, this assessment assumes agencies undertake the recommendations below.</p>
+
+<h3 id="recommendations">Recommendations</h3>
+
+<p>To achieve and maintain maturity level 3 it is recommended agencies validate their WDAC rule sets at least annually. In addition, agencies are expected to review application control events via either Defender for Endpoint or a third-party centralised logging platform to detect and action cyber security events.</p>
+
+<h2 id="patch-applications">Patch applications</h2>
+
+<p class="maturity">Maturity level: 3</p>
+
+<p>Microsoft (first party) application updates are automatically deployed and installed on blueprint devices via MEM. This includes the Edge internet browser and Microsoft Office productivity suite. By default, the blueprint does not include any third-party applications. If required, MEM can also be used to deploy third-party application packages, including manually packaged patches.</p>
+
+<p>Microsoft Defender for Endpoint provides an <a href="https://docs.microsoft.com/en-au/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt?view=o365-worldwide">automated vulnerability management capability</a>. Application vulnerabilities, such as missing patches, are reported to the Microsoft 365 Defender portal and email alerts can be configured to notify cyber security personnel of newly detected vulnerabilities.</p>
+
+<p>The blueprint does not include any unsupported or legacy applications.</p>
+
+<p>As all required technical controls are implemented by the blueprint, the maturity level has been assessed at 3*. Note, this assessment assumes agencies undertake the recommendations presented below.</p>
+
+<p>* If agencies do not license and configure Defender for Endpoint as recommended by the blueprint, their maturity will be reduced to 0 unless alternative third-party vulnerability scanner is used.</p>
+
+<h3 id="recommendations-1">Recommendations</h3>
+
+<p>It is recommended that agencies monitor the success of application patching, via either MEM or Defender for Endpoint, to ensure patches are applied within the target deployment timeframe (e.g., within 48 hours for exploitable vulnerabilities).</p>
+
+<p>If agencies deploy third-party applications to blueprint devices, they are responsible for ensuring patches are deployed within the required timeframes to maintain maturity level 3. Agencies should consider enabling automatic update features for applications or deploy an automated third-party application patching solution.</p>
+
+<h2 id="configure-microsoft-office-macro-settings">Configure Microsoft Office macro settings</h2>
+
+<p class="maturity">Maturity level: 3</p>
+
+<p>The blueprint restricts macro execution to only those signed by a trusted digital certificate in accordance with the <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/microsoft-office-macro-security">ACSC Microsoft Office Macro Security</a> guidance. This includes blocking Microsoft Office macros originating from the internet and preventing standard users from modifying macro security settings in all Microsoft Office applications. The blueprint does not provide any recommendations for the use of trusted locations.</p>
+
+<p>Microsoft Defender Antivirus and Defender for Endpoint provide antivirus scanning of all Microsoft Office file types, including embedded macros. This leverages the <a href="https://www.microsoft.com/security/blog/2018/09/12/office-vba-amsi-parting-the-veil-on-malicious-macros/">Antimalware Scan Interface</a> (AMSI) to enable inspecting macros at runtime. In addition, the <a href="https://docs.microsoft.com/en-au/microsoft-365/security/office-365-security/safe-docs">Safe Documents</a> feature of Defender for Office 365 is also enabled as part of the blueprint to scan documents that are opened in Protected View.</p>
+
+<p>Microsoft Office macros are blocked from making Win32 API calls using Attack Surface Reduction (ASR) rules as per the ACSC <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-windows-10-version-21h1-workstations">Windows 10</a> and <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-office-365-proplus-office-2019-and-office-2016">Microsoft Office</a> hardening guides.</p>
+
+<p>Defender for Endpoint centrally stores Endpoint Detection &amp; Response (EDR) logs for all Windows 10 blueprint devices, which includes the execution of macro-enabled documents and resulting behaviours (such as attempts to make Win32 API calls).</p>
+
+<p>As all required technical controls are implemented by the blueprint, the maturity level has been assessed at 3*. Note, this assessment assumes agencies undertake the recommendations presented below.</p>
+
+<p>* If agencies do not license and configure Defender for Endpoint as recommended by the blueprint, their maturity will be reduced to 2 unless a central logging facility is implemented to retrieve macro execution logs from the registry.</p>
+
+<h3 id="recommendations-2">Recommendations</h3>
+
+<p>If users do not have a valid business requirement, it is recommended that macros are disabled for them. The blueprint provides an additional MEM policy that blocks macros for all Microsoft Office applications that agencies can deploy for those users that do not require macros.</p>
+
+<p>It is recommended that agencies review their list of trusted publishers at least annually. Agencies should also review macro execution events for any indications of malicious activity.</p>
+
+<h2 id="user-application-hardening">User application hardening</h2>
+
+<p class="maturity">Maturity level: 3</p>
+
+<p>The blueprint does not include the deployment of Java, so cannot process Java from the internet.</p>
+
+<p>Microsoft Edge provides limited web advertisement blocking from the internet, which is configured by MEM. However, this functionality is very limited and is not considered an effective control. To compensate for this, the blueprint provides guidance on the deployment of third-party web advertisement blocking add-ons for Edge via MEM.</p>
+
+<p>Internet Explorer 11 is removed from the Windows 10 blueprint SOE.</p>
+
+<p>The ASR rules are configured as per the ACSC <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-windows-10-version-21h1-workstations">Windows 10</a> and <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-office-365-proplus-office-2019-and-office-2016">Microsoft Office</a> hardening guides to prevent Microsoft Office from creating child processes, creating executable content, injecting code into other processes, and activating Object Linking and Embedding (OLE) packages.</p>
+
+<p>No third-party PDF software is included in the blueprint. Microsoft Edge is configured as the default PDF reader and hardened as per ACSC guidance.</p>
+
+<p>Standard users are not able to change security-related settings in Microsoft Office or Edge as these are configured by MEM.</p>
+
+<p>.NET Framework 3.5 (and all previous) versions are not included in the Windows 10 blueprint SOE. PowerShell version 2.0 is also removed from the SOE.</p>
+
+<p>WDAC is configured so that PowerShell runs in Constrained Language Mode (CLM).</p>
+
+<p>PowerShell script block logging is enabled via MEM in accordance with the ACSC <a href="https://www.cyber.gov.au/acsc/view-all-content/publications/hardening-microsoft-windows-10-version-21h1-workstations">Windows 10</a> hardening guide. Defender for Endpoint also centrally stores EDR logs for all Windows 10 blueprint devices, which includes PowerShell script execution and resultant events.</p>
+
+<p>As all required technical controls are implemented by the blueprint, the maturity level has been assessed at 3*. Note, this assessment assumes agencies undertake the recommendations presented below.</p>
+
+<p>* If agencies do not license and configure Defender for Endpoint as recommended by the blueprint, their maturity will be reduced to 2 unless a central logging facility is implemented to retrieve PowerShell logs from Windows 10 devices.</p>
+
+<h3 id="recommendations-3">Recommendations</h3>
+
+<p>Agencies should review Defender for Endpoint alerts and logs to detect unauthorised PowerShell execution attempts.</p>
+
+<h2 id="restrict-administrative-privileges">Restrict administrative privileges</h2>
+
+<p class="maturity">Maturity level: 3</p>
+
+<p>The blueprint includes two types of users, standard and privileged users. Standard users are assigned mailboxes and can access the internet from Windows 10 devices, but do not have elevated privileges on those devices. Privileged users are not assigned an Office 365 license and therefore do not have mailboxes assigned to their accounts. AppLocker is configured by MEM to prevent privileged users from launching web browsers or mail clients from blueprint devices.</p>
+
+<p>The local administrator account is disabled as per the ACSC Windows 10 hardening guide. The local administrator account is renamed, the password set randomly, and the account disabled. The local administrator group is enabled and contains the Azure Active Directory (Azure AD) Global Admins and Device Admins roles. These roles are configured for Azure AD Privileged Identity Management (PIM), providing Just-in-Time (JIT) administration.</p>
+
+<p>Azure AD PIM Access Reviews provide automation to assist in the revalidation of privileged accounts and membership of Azure AD privileged roles. Azure AD does not provide a native capability to disable account after a period of inactivity. The blueprint provides a <a href="https://desktop.gov.au/blueprint/abac/admin-disable-inactive-users.html">technical guide</a> to implement this capability via the Graph API and Azure AD PowerShell modules. Note, at the time of writing the Graph API to query an account property is still in <a href="https://docs.microsoft.com/en-au/azure/active-directory/reports-monitoring/howto-manage-inactive-user-accounts">beta</a>.</p>
+
+<p>All logins to blueprint devices are recorded and centralised to Defender for Identity. All privileged actions performed in the Microsoft 365 and Azure portals are also logged to the Audit Log, including changes to privileged accounts and groups. User activities for the Office 365 apps are also recorded in the <a href="https://docs.microsoft.com/en-au/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide">Audit Log</a>.</p>
+
+<p>Windows Defender Credential Guard is enabled in the Windows 10 blueprint SOE (on supported devices).</p>
+
+<p>Although not within the specific design scope of the blueprint, it provides general guidance for <a href="https://desktop.gov.au/blueprint/overview.html#secure-system-administration">secure system administration</a> for agencies leveraging the blueprint. This includes recommendations for the use of separate credentials for privileged and non-privileged users, deployment of hardened Privileged Access Workstations (PAWs) and jump boxes, use of a web filtering system, and the restriction of management traffic flows.</p>
+
+<p>As all required technical controls that are in scope of the blueprint are implemented, the maturity level has been assessed at 3*. Note, this assessment assumes agencies have implemented a compliant secure system administration solution and undertake the recommendations presented below.</p>
+
+<p>* If agencies have not deployed a separate privileged operating environment in accordance with the recommendations of the blueprint, then the maturity is capped at 0.</p>
+
+<h3 id="recommendations-4">Recommendations</h3>
+
+<p>Agencies should ensure that only the specific privileges required for a role are assigned to privileged accounts, leveraging Azure AD PIM where possible. Agencies are expected to review changes to privileged accounts and groups via either Defender for Identity or a third-party centralised logging platform to detect and action cyber security events.</p>
+
+<h2 id="patch-operating-systems">Patch operating systems</h2>
+
+<p class="maturity">Maturity level: 3</p>
+
+<p>Windows 10 operating system updates are automatically deployed and installed on blueprint devices using Windows Update for Business which is configured via MEM. For hybrid deployments, patches may be deployed to blueprint devices via Microsoft Endpoint Configuration Manager (MECM) or Windows Server Update Services (WSUS) rather than downloaded from the internet directly.</p>
+
+<p>Microsoft Defender for Endpoint provides an automated <a href="https://docs.microsoft.com/en-au/microsoft-365/security/defender-endpoint/next-gen-threat-and-vuln-mgt?view=o365-worldwide">vulnerability management capability</a>. Operating system vulnerabilities, such as missing patches, are reported to the Microsoft 365 Defender portal and email alerts can be configured to notify cyber security personnel of newly detected vulnerabilities.</p>
+
+<p>The Windows 10 blueprint SOE is built using the 21H2 General Availability release of Windows 10.</p>
+
+<p>The blueprint does not include any unsupported or legacy operating systems.</p>
+
+<p>As all required technical controls are implemented by the blueprint, the maturity level has been assessed at 3*. Note, this assessment assumes agencies undertake the recommendations presented below.</p>
+
+<p>* If agencies do not license and configure Defender for Endpoint as recommended by the blueprint, their maturity will be reduced to 0 unless a third-party vulnerability scanner is deployed.</p>
+
+<h3 id="recommendations-5">Recommendations</h3>
+
+<p>It is recommended that agencies monitor the success of operating system patching, via either MEM or Defender for Endpoint, to ensure patches are applied within the target deployment timeframe (e.g., within 48 hours for exploitable vulnerabilities).</p>
+
+<h2 id="multi-factor-authentication">Multi-factor authentication</h2>
+
+<p class="maturity">Maturity level: 2</p>
+
+<p>M365 products are considered as third-party internet-facing services that process and store both sensitive and non-sensitive data for agencies using the blueprint.</p>
+
+<p>Access to all M365 products for blueprint users requires an Azure Multi-Factor Authentication (Azure MFA) prompt to be completed using the Microsoft Authenticator app (something users have) along with their Azure AD password (something users know). The Azure MFA prompt can be completed by either responding to a push notification within the app, or by entering a six-digit code presented by the app.</p>
+
+<p>Privileged users are also required to complete an Azure MFA prompt when authenticating at either a web portal (e.g. Microsoft 365 admin center or Microsoft Azure) or when connecting to a service via PowerShell.</p>
+
+<p>The Microsoft Authenticator app authenticating to Azure AD is not considered verifier impersonation resistant. Microsoft recommend using a FIDO2 security key, smart card, or Windows Hello for Business with hardware Trusted Platform Model (TPM) to implement <a href="https://docs.microsoft.com/en-au/azure/active-directory/standards/nist-authenticator-assurance-level-3">verifier impersonation resistant authentication</a>.</p>
+
+<p>All authentication attempts to M365 services, including Azure MFA status, are logged within the Azure AD sign-in log. Defender for Identity and Microsoft Cloud App Security (MCAS) provide additional capabilities for agencies using the blueprint to detect unauthorised authentication attempts.</p>
+
+<p>As the blueprint’s implementation of MFA is not considered verifier impersonation resistant, the maturity level is 2.</p>
+
+<h3 id="recommendations-6">Recommendations</h3>
+
+<p>It is recommended agencies review Azure AD sign-in logs and MCAS alerts to detect potentially malicious authentication attempts.</p>
+
+<p>Agencies seeking to reach maturity level 3 should consider alternative authentication methods not currently included in the blueprint.</p>
+
+<h2 id="regular-backups">Regular backups</h2>
+
+<p class="maturity">Maturity level: N/A</p>
+
+<p>The assessment of regular backups against the blueprint has been descoped and is now reported as Not Assessed. This is a result of the blueprint not including agency backup capabilities, and to reflect the need for agencies to implement their own backup strategy tailored to their unique business continuity requirements.</p>
+
+<p>Microsoft provide the <a href="https://docs.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility">Shared Responsibility Model</a> to assist customers understand what responsibilities are held by Microsoft as the provider of cloud services, and which remain the responsibility of the agency using these services. Responsibility for ‘<em>Information and data</em>’ is described as ‘<em>always retained by the customer</em>’. Therefore, agencies are responsible for the protection of data including backup and restoration.</p>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

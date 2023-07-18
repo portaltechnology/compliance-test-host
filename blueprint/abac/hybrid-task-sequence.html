@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hybrid - task sequence deploy</title>
+<meta name="description" content="The following provides guidance on settings required to develop a Windows 10 task sequence that can be used as the basis for the Agency specific Operating System image used prior to Autopilot taking over the image in Hybrid deployments. Base...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/abac/hybrid-task-sequence.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Hybrid - task sequence deploy">
+<meta property="og:description" content="The following provides guidance on settings required to develop a Windows 10 task sequence that can be used as the basis for the Agency specific Operating System image used prior to Autopilot taking over the image in Hybrid deployments. Base...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/conditional-access-policies.html">Conditional access policies</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-applications.html">Intune applications</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-compliance.html">Intune compliance</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-configuration.html">Intune configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-enrolment.html">Intune enrolment</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-software-updates.html">Intune software updates</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/abac/hybrid-task-sequence.html">Hybrid - task sequence deploy</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                <ul class="nav au-link-list"><li><a href="#base-configuration">Base configuration</a></li><li><a href="#task-sequence-prerequisites">Task sequence prerequisites</a></li><li><a href="#windows-10-task-sequence">Windows 10 task sequence</a></li><li><a href="#autopilot">Autopilot</a><ul><li><a href="#annex-1-unattendxml">Annex 1: Unattend.xml</a></li><li><a href="#annex-2-autopilotconfigurationfilejson">Annex 2: AutopilotConfigurationFile.json</a></li></ul></li></ul>
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-network-configuration.html">Hybrid - network configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/admin-disable-inactive-users.html">Administration - disable inactive accounts automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wdac-policy-creation.html">WDAC policy creation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wfw-rules-import.html">Windows Firewall rules import</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Hybrid - task sequence deploy</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+8 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>The following provides guidance on settings required to develop a Windows 10 task sequence that can be used as the basis for the Agency specific Operating System image used prior to Autopilot taking over the image in Hybrid deployments.</p>
+
+<h2 id="base-configuration">Base configuration</h2>
+
+<p>The following table describes the base configuration for the Operating System.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Windows Edition</td>
+      <td>Windows 10 Enterprise</td>
+    </tr>
+    <tr>
+      <td>System Type</td>
+      <td>64-bit Operating System</td>
+    </tr>
+    <tr>
+      <td>Windows Servicing Channel</td>
+      <td>Semi-Annual</td>
+    </tr>
+    <tr>
+      <td>Windows Version</td>
+      <td>21H1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="task-sequence-prerequisites">Task sequence prerequisites</h2>
+
+<p>The following table describes the prerequisites in use in the task sequence.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AutopilotConfigurationFile.json</td>
+      <td>The AutopilotConfigurationFile.json is required to be available within an Microsoft Endpoint Configuration Manager (MECM) package. As a requirement the <a href="/blueprint/abac/intune-enrolment.html">Intune enrolment ABAC</a> would need to be implemented before this ABAC.</td>
+    </tr>
+    <tr>
+      <td>MECM Package</td>
+      <td><strong>Windows 10 Customisations</strong> package to be created within MECM and contain the <a href="#annex-2-autopilotconfigurationfilejson">AutopilotConfigurationFile.json</a> and the <a href="#annex-1-unattendxml">Unattend.xml</a> files.</td>
+    </tr>
+    <tr>
+      <td>MECM Package</td>
+      <td><strong>Configuration Manager Client</strong> packaged needs to exist, this typically exists by default with the MECM installation.</td>
+    </tr>
+    <tr>
+      <td>MECM Boot Image</td>
+      <td>A WinPE boot image is required to boot to Windows PE, this typically exists by default with the MECM installation.</td>
+    </tr>
+    <tr>
+      <td>MECM Operating System Image</td>
+      <td>An Operating System image is required within MECM. This should consist of the Windows 10 WIM file as per the <strong>Base Configuration</strong>. Additional Agency specific customisations can be injected into the WIM as required, however this is out of scope of this ABAC.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="windows-10-task-sequence">Windows 10 task sequence</h2>
+
+<ul>
+  <li>Install operating system
+    <ul>
+      <li>Item: Restart in Windows PE
+        <ul>
+          <li>Type: Restart Computer</li>
+          <li>Configuration: The boot image assigned to this task sequence</li>
+          <li>Options/Scripts: Task Sequence Variable <code class="language-plaintext highlighter-rouge">_SMSTSInWinPE equals “false”</code></li>
+        </ul>
+      </li>
+      <li>Item: Partition Disk 0 - BIOS
+        <ul>
+          <li>Type: Format and Partition Disk</li>
+          <li>Configuration
+            <ul>
+              <li>System Reserved (Primary) 350 MB fixed size. NTFS file system</li>
+              <li>Windows (Primary) 99% of remaining space on disk. NTFS file system</li>
+              <li>Recovery (Recovery) 100% of remaining space on disk. NTFS file system.</li>
+            </ul>
+          </li>
+          <li>Options/Scripts: Task Sequence Variable
+            <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_SMSTSClientCache not exists
+_SMSTSMediaType not equals “OEMMedia”
+_OSDMigrateUseHardlinks not equals “true”
+_SMSTSBootUEFI not equals “true”
+</code></pre></div>            </div>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Partition Disk 0 – UEFI
+        <ul>
+          <li>Type: Format and Partition Disk</li>
+          <li>Configuration
+            <ul>
+              <li>(EFI) 500 MB fixed size. FAT32 file system.</li>
+              <li>(MBR) 128 MB fixed size.</li>
+              <li>Windows (Primary) 99% of remaining space on disk. NTFS file system.</li>
+              <li>Recovery (Recovery) 100% of remaining space on disk. NTFS file system.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Pre-provision BitLocker
+        <ul>
+          <li>Type: Pre-provision BitLocker</li>
+          <li>Configuration
+            <ul>
+              <li>Apply BitLocker to the specified drive: Next available formatted partition</li>
+              <li>Skip this step for computers that do not have a TPM or when TPM is not enabled</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Apply Operating System
+        <ul>
+          <li>Type: Apply Operating System Image</li>
+          <li>Configuration
+            <ul>
+              <li>Apply operating system from a captured image
+                <ul>
+                  <li>Install package: Windows 10 x64 1909</li>
+                  <li>Image index: Windows 10 Enterprise</li>
+                </ul>
+              </li>
+              <li>Use an unattended or sysprep answer file for a custom installation
+                <ul>
+                  <li>Packaged: Windows 10 Customisations</li>
+                  <li>File name: <a href="#annex-1-unattendxml">Unattend.xml</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Apply Windows Settings
+        <ul>
+          <li>Type: Apply Windows Settings</li>
+          <li>Configuration
+            <ul>
+              <li>Organization name: Agency Name</li>
+              <li>Product key: KMS or leave blank</li>
+              <li>Randomly generate the local administrator password and disable the account on all supported platforms (recommended)</li>
+              <li>Time zone: (UTC +10:00) Canberra, Melbourne, Sydney</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Apply Windows Autopilot configuration
+        <ul>
+          <li>Type: Run Command Line</li>
+          <li>Configuration
+            <ul>
+              <li>Command line: <code class="language-plaintext highlighter-rouge">Cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\Windows\ Provisioning\Autopilot\ /c</code> <br />Note: for Autopilot Configuration File refer to <a href="#annex-2-autopilotconfigurationfilejson">Annex 2</a>.</li>
+              <li>Package: Windows 10 Customisations</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Apply Device Drivers
+        <ul>
+          <li>Type: Auto Apply Drivers</li>
+          <li>Configuration
+            <ul>
+              <li>Install only the best matched compatible drivers</li>
+              <li>Consider drivers from all categories. Note: Agency specific Device Drivers will need to be added to MECM.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Setup Operating System
+    <ul>
+      <li>Item: Setup Windows and Configuration Manager
+        <ul>
+          <li>Type: Setup Windows and ConfigMgr</li>
+          <li>Configuration
+            <ul>
+              <li>Client Package: Configuration Manager Client Package</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Enable BitLocker
+        <ul>
+          <li>Type: Enable BitLocker</li>
+          <li>Configuration
+            <ul>
+              <li>Current operating system drive</li>
+              <li>TPM only</li>
+              <li>Choose where to create the recovery key: In Active Directory Domain Services</li>
+              <li>Note: This task may cause issues if there is no supported TPM module located.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Install Updates
+        <ul>
+          <li>Type: Install Software Updates</li>
+          <li>Configuration
+            <ul>
+              <li>Available for installation – All software updates</li>
+              <li>Evaluate software updates form cached scan results: Enabled</li>
+            </ul>
+          </li>
+          <li>Options/Scripts
+            <ul>
+              <li>Continue on error</li>
+              <li>Task Sequence Variable: <code class="language-plaintext highlighter-rouge">_SMSTSMediaType not equals "FullMedia"</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Item: Install Applications
+        <ul>
+          <li>Type: Install Applications</li>
+          <li>Configuration
+            <ul>
+              <li>Install the following applications: Agency specific applications</li>
+              <li>Note: This step should be considered optional and only used if the applications are unable to be migrated to Microsoft Endpoint Manager - Intune (Intune)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Prepare device for Windows Autopilot
+    <ul>
+      <li>Item: Prepare Configuration Manager Client
+        <ul>
+          <li>Type: Prepare ConfigMgr Client for Capture</li>
+        </ul>
+      </li>
+      <li>Item: Prepare Windows for Capture
+        <ul>
+          <li>Type: Run Command Line</li>
+          <li>Configuration
+            <ul>
+              <li>Command Line: <code class="language-plaintext highlighter-rouge">c:\windows\system32\sysprep\sysprep.exe /oobe /reboot</code></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Figure 1 has been included to show order of the task sequence.</p>
+
+<p><img src="/assets/images/abac/windows-10-task-sequence.png" alt="Figure 1 Windows 10 Task Sequence" /></p>
+
+<h2 id="autopilot">Autopilot</h2>
+
+<p>Once the Task Sequence has been completed the Windows OOBE (Out Of the Box Experience) will start at next power cycle of the workstation. Autopilot will start its process to apply the additional Agency customisations.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Region</td>
+      <td>Australia</td>
+    </tr>
+    <tr>
+      <td>Keyboard Layout</td>
+      <td>US</td>
+    </tr>
+    <tr>
+      <td>Email Address</td>
+      <td>Agency specific user</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following figure shows the OOBE Agency specific welcome page.</p>
+
+<p><img src="/assets/images/abac/windows-10-welcome.png" alt="Figure 2 Windows 10 OOBE Welcome Screen" /></p>
+
+<h3 id="annex-1-unattendxml">Annex 1: Unattend.xml</h3>
+
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;unattend</span> <span class="na">xmlns=</span><span class="s">"urn:schemas-microsoft-com:unattend"</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;settings</span> <span class="na">pass=</span><span class="s">"oobeSystem"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"Microsoft-Windows-International-Core"</span> <span class="na">processorArchitecture=</span><span class="s">"amd64"</span> <span class="na">publicKeyToken=</span><span class="s">"31bf3856ad364e35"</span> <span class="na">language=</span><span class="s">"neutral"</span> <span class="na">versionScope=</span><span class="s">"nonSxS"</span> <span class="na">xmlns:wcm=</span><span class="s">"http://schemas.microsoft.com/WMIConfig/2002/State"</span> <span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;InputLocale&gt;</span>0c09:00000409<span class="nt">&lt;/InputLocale&gt;</span>
+               <span class="nt">&lt;SystemLocale&gt;</span>en-AU<span class="nt">&lt;/SystemLocale&gt;</span>
+               <span class="nt">&lt;UILanguage&gt;</span>en-AU<span class="nt">&lt;/UILanguage&gt;</span>
+               <span class="nt">&lt;UserLocale&gt;</span>en-AU<span class="nt">&lt;/UserLocale&gt;</span>
+               <span class="nt">&lt;UILanguageFallback&gt;</span>en-US<span class="nt">&lt;/UILanguageFallback&gt;</span>
+          <span class="nt">&lt;/component&gt;</span>
+          <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">"Microsoft-Windows-Shell-Setup"</span> <span class="na">processorArchitecture=</span><span class="s">"amd64"</span> <span class="na">publicKeyToken=</span><span class="s">"31bf3856ad364e35"</span> <span class="na">language=</span><span class="s">"neutral"</span> <span class="na">versionScope=</span><span class="s">"nonSxS"</span> <span class="na">xmlns:wcm=</span><span class="s">"http://schemas.microsoft.com/WMIConfig/2002/State"</span><span class="nt">&gt;</span>
+               <span class="nt">&lt;OOBE&gt;</span>
+                    <span class="nt">&lt;HideWirelessSetupInOOBE&gt;</span>true<span class="nt">&lt;/HideWirelessSetupInOOBE&gt;</span>
+                    <span class="nt">&lt;NetworkLocation&gt;</span>Work<span class="nt">&lt;/NetworkLocation&gt;</span>
+                    <span class="nt">&lt;SkipMachineOOBE&gt;</span>true<span class="nt">&lt;/SkipMachineOOBE&gt;</span>
+                    <span class="nt">&lt;SkipUserOOBE&gt;</span>true<span class="nt">&lt;/SkipUserOOBE&gt;</span>
+               <span class="nt">&lt;/OOBE&gt;</span>
+          <span class="nt">&lt;/component&gt;</span>
+     <span class="nt">&lt;/settings&gt;</span>
+<span class="nt">&lt;/unattend&gt;</span>
+</code></pre></div></div>
+
+<h3 id="annex-2-autopilotconfigurationfilejson">Annex 2: AutopilotConfigurationFile.json</h3>
+
+<p>This is an example AutopilotConfigurationFile.json only. This file will be agency specific and should be generated from the Intune tenant. Ensure that the <code class="language-plaintext highlighter-rouge">TenantId</code> and <code class="language-plaintext highlighter-rouge">ZtdCorrelationID</code> are correct before using.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"CloudAssignedDomainJoinMethod"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedDeviceName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TEST%RAND: 2%"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedAutopilotUpdateTimeout"</span><span class="p">:</span><span class="w"> </span><span class="mi">1800000</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedForcedEnrollment"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"Version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2049</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedTenantId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedAutopilotUpdateDisabled"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"ZtdCorrelationId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxxxxxxx-xxx-xxxx-xxxx-xxxxxxxxxxxx"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"Comment_File"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Profile Autopilot"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedAadServerData"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">ZeroTouchConfig</span><span class="se">\"</span><span class="s2">:{</span><span class="se">\"</span><span class="s2">CloudAssignedTenantUpn</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">ForcedEnrollment</span><span class="se">\"</span><span class="s2">:1,</span><span class="se">\"</span><span class="s2">CloudAssignedTenantDomain</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">testagency.gov.au</span><span class="se">\"</span><span class="s2">}}"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedOobeConfig"</span><span class="p">:</span><span class="w"> </span><span class="mi">1310</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedTenantDomain"</span><span class="p">:</span><span class="w"> </span><span class="s2">"testagency.gov.au"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"CloudAssignedLanguage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"os-default"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

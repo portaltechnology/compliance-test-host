@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft Endpoint Manager - Intune applications</title>
+<meta name="description" content="The following Microsoft Endpoint Manager - Intune (Intune) applications can be found in the Azure Portal at Microsoft Endpoint Manager &amp;gt; Apps Company portal Name: Company Portal Description: - Type: Web link App information Publisher: Microsoft App URL: https://portal.manage.microsoft.com/ Require...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/abac/intune-applications.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Microsoft Endpoint Manager - Intune applications">
+<meta property="og:description" content="The following Microsoft Endpoint Manager - Intune (Intune) applications can be found in the Azure Portal at Microsoft Endpoint Manager &amp;gt; Apps Company portal Name: Company Portal Description: - Type: Web link App information Publisher: Microsoft App URL: https://portal.manage.microsoft.com/ Require...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/conditional-access-policies.html">Conditional access policies</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/abac/intune-applications.html">Intune applications</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                <ul class="nav au-link-list"><li><a href="#company-portal">Company portal</a></li><li><a href="#microsoft-authenticator">Microsoft Authenticator</a></li><li><a href="#microsoft-edge">Microsoft Edge</a></li><li><a href="#microsoft-edge-for-windows-10">Microsoft Edge for Windows 10</a></li><li><a href="#microsoft-excel">Microsoft Excel</a></li><li><a href="#microsoft-onedrive">Microsoft OneDrive</a></li><li><a href="#microsoft-outlook">Microsoft Outlook</a></li><li><a href="#microsoft-teams">Microsoft Teams</a></li><li><a href="#microsoft-word">Microsoft Word</a></li><li><a href="#power-apps">Power Apps</a></li><li><a href="#microsoft-whiteboard">Microsoft Whiteboard</a></li><li><a href="#microsoft-planner">Microsoft Planner</a></li><li><a href="#microsoft-365-apps-for-windows-10">Microsoft 365 Apps for Windows 10</a></li></ul>
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-compliance.html">Intune compliance</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-configuration.html">Intune configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-enrolment.html">Intune enrolment</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-software-updates.html">Intune software updates</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-task-sequence.html">Hybrid - task sequence deploy</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-network-configuration.html">Hybrid - network configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/admin-disable-inactive-users.html">Administration - disable inactive accounts automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wdac-policy-creation.html">WDAC policy creation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wfw-rules-import.html">Windows Firewall rules import</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Microsoft Endpoint Manager - Intune applications</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+14 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>The following Microsoft Endpoint Manager - Intune (Intune) applications can be found in the Azure Portal at <code class="language-plaintext highlighter-rouge">Microsoft Endpoint Manager &gt; Apps</code></p>
+
+<h2 id="company-portal">Company portal</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Company Portal</code></li>
+  <li>Description: -</li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">Web link</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>App URL: <code class="language-plaintext highlighter-rouge">https://portal.manage.microsoft.com/</code></li>
+      <li>Require a managed browser to open this link: <code class="language-plaintext highlighter-rouge">No</code></li>
+      <li>Category: <code class="language-plaintext highlighter-rouge">Business</code></li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: -</li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">rol-Agency-Users</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-authenticator">Microsoft Authenticator</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Authenticator</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Sign in is easy, convenient, and secure when you use Microsoft Authenticator. Use your phone, not your password, to log into your Microsoft account. You simply have to enter your username, then approve the notification sent to your phone. Your fingerprint, face ID, or PIN will provide a second layer of security in this two step verification process. After, you'll have access to all your Microsoft products</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-authenticator/id983156458?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-authenticator.png" alt="Microsoft Authenticator" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-edge">Microsoft Edge</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Edge</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Introducing the new Microsoft Edge. It’s time to expect more. More privacy. More control. More productivity. More value. Browse anywhere with one continuous experience from your phone to your computer and other signed-in devices. Microsoft Edge gives you the tools to protect your privacy online with features like tracking prevention, AdBlock Plus and InPrivate mode. Organise the web in a way that cuts through the clutter, making it easier to find, view and manage your content on-the-go. With world class compatibility, performance and new features, the new Microsoft Edge is the only browser you’ll ever need.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-edge/id1288723196?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-edge.png" alt="Microsoft Edge" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-edge-for-windows-10">Microsoft Edge for Windows 10</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Edge for Windows 10</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Microsoft Edge is the browser for business with modern and legacy web compatibility, new privacy features such as Tracking prevention, and built-in productivity tools such as enterprise-grade PDF support and access to Office and corporate search right from a new tab.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">Microsoft Edge (Windows 10)</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>Category: <code class="language-plaintext highlighter-rouge">Productivity</code></li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: <code class="language-plaintext highlighter-rouge">https://www.microsoft.com/en-us/windows/microsoft-edge</code></li>
+      <li>Privacy URL: <code class="language-plaintext highlighter-rouge">https://privacy.microsoft.com/en-US/privacystatement</code></li>
+      <li>Developer: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>Owner: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>Notes: -</li>
+      <li>Channel: <code class="language-plaintext highlighter-rouge">Stable</code></li>
+      <li>Language: <code class="language-plaintext highlighter-rouge">Operating system default</code></li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-edge-for-windows-10.png" alt="Microsoft Edge for Windows 10" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">grp-agency-windows10-dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-excel">Microsoft Excel</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Excel</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Microsoft Excel, the spreadsheet app, lets you create, view, edit, and share your files quickly and easily. Manage spreadsheets, tables and workbooks attached to email messages from your phone with this powerful productivity app from Microsoft.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-excel/id586683407?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-excel.png" alt="Microsoft Excel" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-onedrive">Microsoft OneDrive</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft OneDrive</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Do more wherever you go with Microsoft OneDrive. Get to and share your documents, photos, and other files from your iOS device, computer (PC or Mac), and any other devices you use. Use the Office mobile apps to stay productive and work together, no matter where you are. The OneDrive app for iOS lets you easily work with your personal and work files when you're on the go.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-onedrive/id477537958?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-onedrive.png" alt="Microsoft OneDrive" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-outlook">Microsoft Outlook</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Outlook</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Outlook lets you bring all your email accounts and calendars in one convenient spot. Whether it's staying on top of your inbox or scheduling the next big thing, we make it easy to be your most productive, organized, and connected self.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-outlook/id951937596?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: <code class="language-plaintext highlighter-rouge">Productivity</code></li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-outlook.png" alt="Microsoft Outlook" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-teams">Microsoft Teams</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Teams</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Microsoft Teams is your hub for teamwork in Office 365. All your team conversations, files, meetings, and apps live together in a single shared workspace, and you can take it with you on your favourite mobile device. Whether you’re sprinting towards a deadline or sharing your next big idea, Teams can help you achieve more.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-teams/id1113153706?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-teams.png" alt="Microsoft Teams" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-word">Microsoft Word</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Word</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">The trusted Word app lets you create, edit, view, and share your files with others quickly and easily. Send, view and edit Office docs attached to emails from your phone with this powerful word processing app from Microsoft.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/us/app/microsoft-word/id586447913?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-word.png" alt="Microsoft Word" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="power-apps">Power Apps</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Power Apps</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Get Power Apps to use business apps made for your team and organization. Install Power Apps for iPhone and iPad to: Use custom Power Apps that were shared with you; Get work done from anywhere and on any device; Automate tasks and accomplish more • Access, capture, and share business data.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/au/app/power-apps/id1047318566?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-power-apps.png" alt="PowerApps" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-whiteboard">Microsoft Whiteboard</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Whiteboard</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Microsoft Whiteboard provides a freeform intelligent canvas where teams can ideate, create and collaborate visually via the cloud. Designed for pen and touch, it lets you write or draw as smoothly as you would with ink, while automatically recognising and transforming shapes and tables as you draw. It enhances teamwork by allowing all team members to edit and comment directly on the canvas in real time, no matter where they are. And all your work stays safe in the cloud, ready to be picked back up from another location or device.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/au/app/microsoft-whiteboard/id1352499399?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/Whiteboard.png" alt="Microsoft Whiteboard" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-planner">Microsoft Planner</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft Planner</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">Planner provides a simple, visual way to organize teamwork. Planner makes it easy for your team to create new plans, organize and assign tasks, share files, chat about what you’re working on, and get updates on progress.</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">iOS Volume-Purchases Program</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft Corporation</code></li>
+      <li>Appstore URL: <code class="language-plaintext highlighter-rouge">https://apps.apple.com/au/app/microsoft-planner/id1219301037?uo=4</code></li>
+      <li>Minimum operating system: <code class="language-plaintext highlighter-rouge">iOS 14.0</code></li>
+      <li>Applicable device type: <code class="language-plaintext highlighter-rouge">iPad</code>, <code class="language-plaintext highlighter-rouge">iPhone and iPod</code></li>
+      <li>Category: -</li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: -</li>
+      <li>Privacy URL: -</li>
+      <li>Developer: -</li>
+      <li>Owner: -</li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/Planner.png" alt="Microsoft Planner" /></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">gpr-iOS-Dynamic</code></li>
+      <li>Available for enrolled devices: -</li>
+      <li>Available with or without enrollment: -</li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-365-apps-for-windows-10">Microsoft 365 Apps for Windows 10</h2>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Microsoft 365 Apps for Windows 10</code></li>
+  <li>Type: <code class="language-plaintext highlighter-rouge">Microsoft 365 Apps for Windows 10</code></li>
+  <li>App information
+    <ul>
+      <li>Publisher: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>Category: <code class="language-plaintext highlighter-rouge">Productivity</code></li>
+      <li>Show this as a featured app in the Company Portal: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Information URL: <code class="language-plaintext highlighter-rouge">https://products.office.com/en-us/explore-office-for-home</code></li>
+      <li>Privacy URL: <code class="language-plaintext highlighter-rouge">https://privacy.microsoft.com/en-US/privacystatement</code></li>
+      <li>Developer: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>Owner: <code class="language-plaintext highlighter-rouge">Microsoft</code></li>
+      <li>Notes: -</li>
+      <li>Logo: <img src="/assets/images/abac/microsoft-office.png" alt="Microsoft Office" /></li>
+    </ul>
+  </li>
+  <li>App suite configuration
+    <ul>
+      <li>Apps to be installed as part of the suite: <code class="language-plaintext highlighter-rouge">Excel, Outlook, PowerPoint, Publisher, Teams, Word</code></li>
+      <li>Architecture: <code class="language-plaintext highlighter-rouge">64-bit</code></li>
+      <li>Update channel: <code class="language-plaintext highlighter-rouge">Monthly Enterprise Channel</code></li>
+      <li>Remove other versions: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Version to install: <code class="language-plaintext highlighter-rouge">Latest</code></li>
+      <li>Use shared computer activation: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Accept the Microsoft Software License Terms on behalf of users: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Install background service for Microsoft Search in Bing: <code class="language-plaintext highlighter-rouge">No</code></li>
+      <li>Languages: <code class="language-plaintext highlighter-rouge">No languages selected</code></li>
+    </ul>
+  </li>
+  <li>Scope tags: <code class="language-plaintext highlighter-rouge">Default</code></li>
+  <li>Assignments
+    <ul>
+      <li>Required: <code class="language-plaintext highlighter-rouge">grp-agency-windows10-dynamic</code></li>
+      <li>Uninstall: -</li>
+    </ul>
+  </li>
+</ul>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>
