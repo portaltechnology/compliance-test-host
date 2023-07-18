@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WDAC policy creation</title>
+<meta name="description" content="The following guide includes instructions on how to generate the Windows Defender Application Control (WDAC) configuration for all implementation types. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/abac/wdac-policy-creation.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="WDAC policy creation">
+<meta property="og:description" content="The following guide includes instructions on how to generate the Windows Defender Application Control (WDAC) configuration for all implementation types. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/conditional-access-policies.html">Conditional access policies</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-applications.html">Intune applications</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-compliance.html">Intune compliance</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-configuration.html">Intune configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-enrolment.html">Intune enrolment</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-software-updates.html">Intune software updates</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-task-sequence.html">Hybrid - task sequence deploy</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-network-configuration.html">Hybrid - network configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/admin-disable-inactive-users.html">Administration - disable inactive accounts automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/abac/wdac-policy-creation.html">WDAC policy creation</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                <ul class="nav au-link-list"><li><a href="#application-control">Application control</a><ul><li><a href="#wdac-policy---baseline">WDAC policy - baseline</a><ul><li><a href="#gold-image-base">Gold image base</a></li><li><a href="#predefined-microsoft-base">Predefined Microsoft base</a></li></ul></li><li><a href="#wdac-policy---supplementary-policy">WDAC policy - supplementary policy</a><ul><li><a href="#whitelisting-an-application">Whitelisting an application</a></li><li><a href="#whitelisting-errors-in-the-event-log">Whitelisting errors in the event log</a></li><li><a href="#linking-to-the-base-policy">Linking to the base policy</a></li><li><a href="#merging-with-the-base-policy">Merging with the base policy</a></li></ul></li><li><a href="#wdac-policy---policy-signing">WDAC policy - policy signing</a></li><li><a href="#wdac-policy---deployment">WDAC policy - deployment</a></li><li><a href="#wdac-policy---removal">WDAC policy - removal</a><ul><li><a href="#signed-policies">Signed policies</a></li><li><a href="#unsigned-policies">Unsigned policies</a></li></ul></li><li><a href="#appendix-1-sample-supplementary-policies">Appendix 1: Sample supplementary policies</a></li></ul></li></ul>
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wfw-rules-import.html">Windows Firewall rules import</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>WDAC policy creation</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+17 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>The following guide includes instructions on how to generate the Windows Defender Application Control (WDAC) configuration for all implementation types.</p>
+
+<p>Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<h2 id="application-control">Application control</h2>
+
+<p>WDAC utilises one or more policies to define what drivers and files are whitelisted to run on a Windows 10 devices. Multiple policies can only be leveraged when the policies are deployed utilising Microsoft Endpoint Manager and the Application Control Configuration Service Provider (CSP). Multiple policies will not work on machines pre 1903. When multiple policy files are leveraged they fall into one of the following scenarios:</p>
+
+<ul>
+  <li><strong>Enforce and Audit Side-by-side</strong> - A base policy configured to enforce and a second base policy configured to audit. This is used to test a new base policy prior to enforcement.</li>
+  <li><strong>Multiple Base Policies Enforced</strong> - Two or more base policies configured in enforce mode. For applications to run they must be whitelisted in both.</li>
+  <li><strong>Supplementary Policies</strong> - A base policy and one or more supplementary policies in enforce mode. For applications to run they must only be whitelisted in one of the policies.</li>
+</ul>
+
+<p>These WDAC policies can be signed to ensure that they cannot be tampered with. Details on signing policy can be found in the <a href="#wdac-policy---policy-signing">WDAC policy - policy signing</a> section.</p>
+
+<p>Once implemented, the procedure to remove one or more WDAC policies can be found in the <a href="#wdac-policy---removal">WDAC policy - removal</a> section.</p>
+
+<h3 id="wdac-policy---baseline">WDAC policy - baseline</h3>
+
+<p>The base policy contains the whitelist for the operating system, base applications, and drivers. It can be generated based upon an existing image (i.e a gold image) or leveraging a predefined Microsoft baseline.</p>
+
+<p><img src="/assets/images/WDAC_base.svg" alt="WDAC base policy" title="WDAC Base Policy creation should utilise a gold image where available else a Microsoft baseline. The Managed Installer function should also be leveraged where a managed installer is in use in the environment" /></p>
+
+<h4 id="gold-image-base">Gold image base</h4>
+
+<p>A base policy generated from a gold image machine should only be utilised where all Windows 10 machines in the environment utilise the same image. The procedure to generate the policy is as follows:</p>
+
+<ol>
+  <li>Deploy the image to a standard organisational Windows 10 device.</li>
+  <li>Ensure all standard software is installed (e.g. Microsoft Office).</li>
+  <li>Verify all drivers are signed (This can be completed utilising sigverif)</li>
+  <li>Using an administrative PowerShell session run
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$PolicyPath</span><span class="o">=</span><span class="nv">$</span><span class="nn">env</span><span class="p">:</span><span class="nv">userprofile</span><span class="o">+</span><span class="s2">"\Desktop\"</span><span class="w">
+</span><span class="nv">$PolicyName</span><span class="o">=</span><span class="s2">"GoldImagePolicy"</span><span class="w">
+</span><span class="nv">$WDACPolicy</span><span class="o">=</span><span class="nv">$PolicyPath</span><span class="o">+</span><span class="nv">$PolicyName</span><span class="o">+</span><span class="s2">".xml"</span><span class="w">
+</span><span class="n">New-CIPolicy</span><span class="w"> </span><span class="nt">-Level</span><span class="w"> </span><span class="nx">Publisher</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-UserPEs</span><span class="w"> </span><span class="nx">3</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">CIPolicyLog.txt</span><span class="w"> </span><span class="nt">-Fallback</span><span class="w"> </span><span class="nx">hash</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Review the CIPolicy.txt file for any items which could not be whitelisted.</li>
+  <li>Using an administrative PowerShell session run
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="c"># Enabled UMCI</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="c"># Enable Boot Menu Protection</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="c"># Require WHQL</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">3</span><span class="w"> </span><span class="c"># Enable Audit Mode</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">4</span><span class="w"> </span><span class="c"># Disable Flight Signing</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">6</span><span class="w"> </span><span class="c"># Enable Unsigned Policy</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">8</span><span class="w"> </span><span class="c"># Require EV Signers</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">10</span><span class="w"> </span><span class="c"># Enable Boot Audit on Failure</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">12</span><span class="w"> </span><span class="c"># Enable Enforce Store Apps</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">13</span><span class="w"> </span><span class="c"># Enable Managed Installer</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">16</span><span class="w"> </span><span class="c"># Enable No Reboot</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">17</span><span class="w"> </span><span class="c"># Enable Allow Supplemental</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">19</span><span class="w"> </span><span class="c"># Enable Dynamic Code Security</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Deploy the file locally in audit mode and validate no additional files require whitelisting
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$WDACPolicyCIP</span><span class="o">=</span><span class="nv">$PolicyPath</span><span class="o">+</span><span class="s2">"{&lt;Policy GUID&gt;}.cip"</span><span class="w">
+</span><span class="n">ConvertFrom-CIPolicy</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nv">$WDACPolicyCIP</span><span class="w">
+</span><span class="n">Copy-Item</span><span class="w"> </span><span class="nv">$WDACPolicyCIP</span><span class="w"> </span><span class="s2">"&lt;OS Volume&gt;\Windows\System32\CodeIntegrity\CIPolicies\Active\{&lt;Policy GUID&gt;}.cip"</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Using an administrative PowerShell session run the following to switch the policy into enforce mode
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">3</span><span class="w"> </span><span class="nt">-Delete</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Deploy the file locally in enforce mode and validate no additional files require whitelisting</li>
+  <li><a href="#wdac-policy---deployment">Deploy the file globally</a></li>
+</ol>
+
+<h4 id="predefined-microsoft-base">Predefined Microsoft base</h4>
+
+<p>Microsoft have developed a number of base policies which provide the whitelisting rules for a standard Windows 10 image. These base policies are located on any Windows 10 machine under <code class="language-plaintext highlighter-rouge">%windir%\schemas\CodeIntegrity\ExamplePolicies</code>. Within that directory, the policy titled <code class="language-plaintext highlighter-rouge">DefaultWindows_Audit.xml</code> should be leveraged as the base policy. It includes the rules necessary to ensure that Windows, 3rd party hardware and software kernel drivers, and Windows Store apps will run.</p>
+
+<p>The procedure to leverage this policy is as follows:</p>
+
+<ol>
+  <li>Make a copy of the policy and place it into a working directory (i.e. My documents)</li>
+  <li>Open the policy in a XML editor such as Visual Studio code or notepad.</li>
+  <li>Remove all flighting related signers (note they will also need to be removed from the signing scenarios)</li>
+  <li>Using an administrative PowerShell session run
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="c"># Enabled UMCI</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="c"># Enable Boot Menu Protection</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="c"># Require WHQL</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">3</span><span class="w"> </span><span class="c"># Enable Audit Mode</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">4</span><span class="w"> </span><span class="c"># Disable Flight Signing</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">6</span><span class="w"> </span><span class="c"># Enable Unsigned Policy</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">8</span><span class="w"> </span><span class="c"># Require EV Signers</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">10</span><span class="w"> </span><span class="c"># Enable Boot Audit on Failure</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">12</span><span class="w"> </span><span class="c"># Enable Enforce Store Apps</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">13</span><span class="w"> </span><span class="c"># Enable Managed Installer</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">16</span><span class="w"> </span><span class="c"># Enable No Reboot</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">17</span><span class="w"> </span><span class="c"># Enable Allow Supplemental</span><span class="w">
+</span><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">19</span><span class="w"> </span><span class="c"># Enable Dynamic Code Security</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Deploy the file locally in audit mode and validate no additional files require whitelisting</li>
+  <li>Using an administrative PowerShell session run the following to switch the policy into enforce mode
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-RuleOption</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="nt">-Option</span><span class="w"> </span><span class="nx">3</span><span class="w"> </span><span class="nt">-Delete</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Deploy the file locally in enforce mode and validate no additional files require whitelisting</li>
+  <li><a href="#wdac-policy---deployment">Deploy the file globally</a></li>
+</ol>
+
+<h3 id="wdac-policy---supplementary-policy">WDAC policy - supplementary policy</h3>
+
+<p>Supplementary policies expand on the base policy and allow for whitelisting to be targeted to users and/or groups. Supplementary policies can contain both allow and deny rules. A supplementary policy is a base policy until it is linked as a supplementary policy to another base policy.</p>
+
+<p>Supplementary policies will not work on machines pre 1903. If you are deploying to pre 1903 machines they must be merged into the base policy. <a href="#merging-with-the-base-policy">Merge policy</a> instructions are available further below.</p>
+
+<h4 id="whitelisting-an-application">Whitelisting an application</h4>
+
+<p>Whitelisting of an application utilising WDAC can be completed utilising a number of methods including Hash (ACSC recommended), file path, and certificate based. Depending on the application, the chosen method of whitelisting may change. Hash whitelisting offers the highest degree of security however it increases the management overhead associated with whitelisting.</p>
+
+<p>If the managed installer option within the base policy is enabled, whitelisting of applications deployed via the managed installer is not required.</p>
+
+<p><img src="/assets/images/WDAC_Intune.svg" alt="WDAC whitelisting application policy" title="Where additional applications are required they should leverage the hash of the files or the publisher file name and version. Once whitelisted they must be linked to the base policy and deployed as a supplementary policy" /></p>
+
+<p>Post identification of the appropriate whitelisting method, the following procedure is used to whitelist the application:</p>
+
+<ol>
+  <li>Within an administrative PowerShell session navigate to the install directory of the application</li>
+  <li>Run the following command
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$whitelistlevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">chosen</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">whitelist</span><span class="w"> </span><span class="nx">e.g.</span><span class="w"> </span><span class="nx">hash</span><span class="p">}</span><span class="w">
+</span><span class="nv">$Outputlocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w">
+</span><span class="nv">$fallbacklevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">backup</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">whitelist</span><span class="w"> </span><span class="nx">e.g.</span><span class="w"> </span><span class="nx">publisher</span><span class="p">}</span><span class="w">
+</span><span class="nv">$directory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">be</span><span class="w"> </span><span class="nx">scanned</span><span class="p">}</span><span class="w">
+</span><span class="n">New-CIPolicy</span><span class="w"> </span><span class="nt">-Level</span><span class="w"> </span><span class="nv">$whitelistlevel</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$Outputlocation</span><span class="w"> </span><span class="nt">-Fallback</span><span class="w"> </span><span class="nv">$fallbacklevel</span><span class="w">  </span><span class="nt">-ScanPath</span><span class="w"> </span><span class="nv">$directory</span><span class="w"> </span><span class="nt">-UserPEs</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Convert the new base policy to a supplementary policy.</li>
+</ol>
+
+<h4 id="whitelisting-errors-in-the-event-log">Whitelisting errors in the event log</h4>
+
+<p>Applications which are not whitelisted will be logged in the code integrity event log on execution. These applications can be whitelisted using the following procedure:</p>
+
+<ol>
+  <li>Within an administrative PowerShell session run the following command
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$whitelistlevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">chosen</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">whitelist</span><span class="w"> </span><span class="nx">e.g.</span><span class="w"> </span><span class="nx">hash</span><span class="p">}</span><span class="w">
+</span><span class="nv">$Outputlocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w">
+</span><span class="nv">$fallbacklevel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">the</span><span class="w"> </span><span class="nx">backup</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">whitelist</span><span class="w"> </span><span class="nx">e.g.</span><span class="w"> </span><span class="nx">publisher</span><span class="p">}</span><span class="w">
+</span><span class="n">New-CIPolicy</span><span class="w"> </span><span class="nt">-Level</span><span class="w"> </span><span class="nv">$whitelistlevel</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$Outputlocation</span><span class="w"> </span><span class="nt">-Fallback</span><span class="w"> </span><span class="nv">$fallbacklevel</span><span class="w">  </span><span class="nt">-audit</span><span class="w"> </span><span class="nt">-UserPEs</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+  <li>Convert the new base policy to a supplementary policy.</li>
+</ol>
+
+<h4 id="linking-to-the-base-policy">Linking to the base policy</h4>
+
+<p>To convert a base policy to a supplementary policy of another base policy they must be linked. Upon linking the policyID of the supplementary policy will be set to a new GUID. This new guid is required when deploying the supplementary policy via Microsoft Endpoint Manager.</p>
+
+<p>The procedure to link the policies is as follows:</p>
+
+<ul>
+  <li>Using an administrative PowerShell session run
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$SupWDACPolicy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">supplementary</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w">
+</span><span class="nv">$SupWDACPolicyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">Name</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">supplementary</span><span class="w"> </span><span class="nx">policy</span><span class="p">}</span><span class="w">
+</span><span class="nv">$WDACPolicy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w">
+</span><span class="nv">$WDACPolicyID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="kr">base</span><span class="w"> </span><span class="n">policy</span><span class="w"> </span><span class="nx">id</span><span class="w"> </span><span class="nx">available</span><span class="w"> </span><span class="nx">within</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">PolicyID</span><span class="w"> </span><span class="nx">tags</span><span class="p">}</span><span class="w">
+</span><span class="n">Set-CIPolicyIdInfo</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="nv">$SupWDACPolicy</span><span class="w"> </span><span class="nt">-PolicyName</span><span class="w"> </span><span class="nv">$SupWDACPolicyName</span><span class="w"> </span><span class="nt">-SupplementsBasePolicyID</span><span class="w"> </span><span class="nv">$WDACPolicyID</span><span class="w"> </span><span class="nt">-BasePolicyToSupplementPath</span><span class="w"> </span><span class="nv">$WDACPolicy</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h4 id="merging-with-the-base-policy">Merging with the base policy</h4>
+
+<p>To merge base policies together the following procedure is used:</p>
+
+<ul>
+  <li>Using an administrative PowerShell session run
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$InitialCIPolicy</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">Path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">first</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="nx">policy</span><span class="p">}</span><span class="w">
+</span><span class="nv">$AuditCIPolicy</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">Path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">base</span><span class="w"> </span><span class="nx">policy</span><span class="p">}</span><span class="w">
+</span><span class="nv">$MergedCIPolicy</span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">location</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">policy</span><span class="p">}</span><span class="w">
+</span><span class="n">Merge-CIPolicy</span><span class="w"> </span><span class="nt">-PolicyPaths</span><span class="w"> </span><span class="nv">$InitialCIPolicy</span><span class="p">,</span><span class="nv">$AuditCIPolicy</span><span class="w"> </span><span class="nt">-OutputFilePath</span><span class="w"> </span><span class="nv">$MergedCIPolicy</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="wdac-policy---policy-signing">WDAC policy - policy signing</h3>
+
+<p>Prior to deployment of the WDAC policy it can be signed using an internal Certificate Authority code signing certificate or a purchased code signing certificate.</p>
+
+<p>The procedure to sign the policy is as follows:</p>
+
+<ul>
+  <li>Using an administrative PowerShell session run
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Add-SignerRule</span><span class="w"> </span><span class="nt">-FilePath</span><span class="w"> </span><span class="p">{</span><span class="n">Path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">XML</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w"> </span><span class="nt">-CertificatePath</span><span class="w"> </span><span class="p">{</span><span class="n">Path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">exported</span><span class="w"> </span><span class="o">.</span><span class="nf">cer</span><span class="w"> </span><span class="nx">certificate</span><span class="p">}</span><span class="w"> </span><span class="nt">-Kernel</span><span class="w"> </span><span class="nt">-User</span><span class="w"> </span><span class="nt">-Update</span><span class="w">
+</span><span class="n">ConvertFrom-CIPolicy</span><span class="w"> </span><span class="nt">-XmlFilePath</span><span class="w"> </span><span class="p">{</span><span class="n">Path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">XML</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">file</span><span class="p">}</span><span class="w"> </span><span class="nt">-BinaryFilePath</span><span class="w"> </span><span class="err">`</span><span class="n">Binary</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="nx">location</span><span class="se">`
+</span><span class="p">{</span><span class="n">Path</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">signtool.exe</span><span class="p">}</span><span class="w"> </span><span class="n">sign</span><span class="w"> </span><span class="nt">-v</span><span class="w"> </span><span class="nx">/n</span><span class="w"> </span><span class="p">{</span><span class="n">Certificate</span><span class="w"> </span><span class="nx">Subject</span><span class="w"> </span><span class="nx">name</span><span class="p">}</span><span class="w"> </span><span class="nt">-p7</span><span class="w"> </span><span class="o">.</span><span class="w"> </span><span class="nt">-p7co</span><span class="w"> </span><span class="mf">1.3</span><span class="o">.</span><span class="nf">6</span><span class="o">.</span><span class="nf">1</span><span class="o">.</span><span class="nf">4</span><span class="o">.</span><span class="nf">1</span><span class="o">.</span><span class="nf">311</span><span class="o">.</span><span class="nf">79</span><span class="o">.</span><span class="nf">1</span><span class="w"> </span><span class="nt">-fd</span><span class="w"> </span><span class="n">sha256</span><span class="w"> </span><span class="p">{</span><span class="n">Binary</span><span class="w"> </span><span class="nx">policy</span><span class="w"> </span><span class="nx">location</span><span class="p">}</span><span class="w">
+</span></code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="wdac-policy---deployment">WDAC policy - deployment</h3>
+
+<p>The above policies are deployed through Microsoft Endpoint Manager - Intune (Intune). The deployment configuration is available within the <a href="/blueprint/abac/intune-configuration.html#agency-wdacbasepolicy">Intune Configuration</a> section.</p>
+
+<h3 id="wdac-policy---removal">WDAC policy - removal</h3>
+
+<h4 id="signed-policies">Signed policies</h4>
+
+<p>The procedure to remove signed policies is as follows:</p>
+<ol>
+  <li>Create a new signed policy with <code class="language-plaintext highlighter-rouge">6 Enabled: Unsigned System Integrity Policy</code> enabled.</li>
+  <li>Deploy the policy and remove the previous policy from deployment.</li>
+  <li>Reboot the machine.</li>
+  <li>Disable the WDAC deployment method.</li>
+  <li>On the machine verify the following files have been deleted (if they have not then delete them)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">OS Volume\Windows\System32\CodeIntegrity\{Policy GUID}.cip</code></li>
+      <li><code class="language-plaintext highlighter-rouge">EFI System Partition\Microsoft\Boot\{Policy GUID}.cip</code></li>
+    </ul>
+  </li>
+  <li>Reboot the machine.</li>
+</ol>
+
+<h4 id="unsigned-policies">Unsigned policies</h4>
+
+<p>The procedure to remove unsigned policies is as follows:</p>
+<ol>
+  <li>Disable the WDAC deployment method.</li>
+  <li>On the machine verify the following files have been deleted (if they have not then delete them)
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">OS Volume\Windows\System32\CodeIntegrity\{Policy GUID}.cip</code></li>
+      <li><code class="language-plaintext highlighter-rouge">EFI System Partition\Microsoft\Boot\{Policy GUID}.cip</code></li>
+    </ul>
+  </li>
+  <li>Reboot the machine.</li>
+</ol>
+
+<h3 id="appendix-1-sample-supplementary-policies">Appendix 1: Sample supplementary policies</h3>
+
+<ul>
+  <li><a href="/assets/files/abac/wdac-msft-rec-block-sup.xml">Example Microsoft Recommended Block Rules Supplemental Policy</a></li>
+  <li><a href="/assets/files/abac/wdac-allow-git-sup.xml">Example Git whitelisting supplementary policy based on publisher and falling back to hash</a></li>
+</ul>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

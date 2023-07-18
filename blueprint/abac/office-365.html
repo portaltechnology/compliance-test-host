@@ -1,0 +1,4972 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Office 365</title>
+<meta name="description" content="Organisation The ABAC settings for the Agency organisation for all implementation types can be found below. This includes Residency, Licensing and Licensing Manual Groups, Theme, Add-ins and Security and Privacy settings. Please note, if a setting is not mentioned in...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/abac/office-365.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Office 365">
+<meta property="og:description" content="Organisation The ABAC settings for the Agency organisation for all implementation types can be found below. This includes Residency, Licensing and Licensing Manual Groups, Theme, Add-ins and Security and Privacy settings. Please note, if a setting is not mentioned in...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/conditional-access-policies.html">Conditional access policies</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-applications.html">Intune applications</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-compliance.html">Intune compliance</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-configuration.html">Intune configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-enrolment.html">Intune enrolment</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-software-updates.html">Intune software updates</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/abac/office-365.html">Office 365</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                <ul class="nav au-link-list"><li><a href="#organisation">Organisation</a><ul><li><a href="#licensing">Licensing</a></li><li><a href="#licensing-manual-groups">Licensing manual groups</a></li><li><a href="#theme">Theme</a></li><li><a href="#add-ins">Add-ins</a></li><li><a href="#security-and-privacy">Security and privacy</a></li></ul></li><li><a href="#exchange-online">Exchange Online</a><ul><li><a href="#connectors">Connectors</a><ul><li><a href="#cloud-native-implementation-types">Cloud-native implementation types</a></li><li><a href="#hybrid-implementation-types">Hybrid implementation types</a></li></ul></li><li><a href="#mx-records">MX records</a></li><li><a href="#spf-and-dmarc-records">SPF and DMARC records</a></li><li><a href="#dkim-records">DKIM records</a></li><li><a href="#dns-records">DNS records</a></li><li><a href="#accepted-domains">Accepted domains</a></li><li><a href="#remote-domains">Remote domains</a></li><li><a href="#organisational-add-ins">Organisational add-ins</a></li><li><a href="#cas-mailbox-plan">CAS mailbox plan</a></li><li><a href="#mailbox-attributes">Mailbox attributes</a></li><li><a href="#authentication-policy">Authentication policy</a></li><li><a href="#outlook-web-access-policy">Outlook Web Access policy</a></li><li><a href="#mailbox-archive">Mailbox archive</a></li><li><a href="#mailbox-auditing">Mailbox auditing</a></li><li><a href="#mail-flow-rules">Mail flow rules</a><ul><li><a href="#outgoing-x-protective-marker-multiple-rules">Outgoing X-Protective-Marker (multiple rules)</a></li><li><a href="#apply-disclaimer">Apply Disclaimer</a></li></ul></li><li><a href="#journaling">Journaling</a></li><li><a href="#mailbox-retention">Mailbox retention</a></li><li><a href="#shared-mailboxes-and-resource-mailboxes">Shared mailboxes and resource mailboxes</a></li><li><a href="#address-lists">Address lists</a></li><li><a href="#distribution-lists">Distribution lists</a></li></ul></li><li><a href="#exchange-online-protection">Exchange Online Protection</a><ul><li><a href="#anti-spam">Anti-spam</a></li><li><a href="#anti-malware">Anti-malware</a></li></ul></li><li><a href="#microsoft-teams">Microsoft Teams</a><ul><li><a href="#client-configuration">Client configuration</a></li><li><a href="#teams-policy">Teams policy</a></li><li><a href="#teams-apps">Teams apps</a></li><li><a href="#calling-policy">Calling policy</a></li><li><a href="#meeting-policy">Meeting policy</a></li><li><a href="#messaging-policy">Messaging policy</a></li><li><a href="#live-events-policies">Live events policies</a></li><li><a href="#external-access-settings">External access settings</a></li><li><a href="#guest-access-settings">Guest access settings</a></li></ul></li><li><a href="#sharepoint-online--onedrive">SharePoint Online &amp; OneDrive</a><ul><li><a href="#sharing">Sharing</a></li><li><a href="#access-control">Access control</a></li><li><a href="#sharepoint-settings">SharePoint settings</a></li><li><a href="#onedrive-settings">OneDrive settings</a></li></ul></li><li><a href="#security-and-compliance">Security and compliance</a><ul><li><a href="#audit-logging">Audit logging</a></li><li><a href="#retention-policies">Retention policies</a></li><li><a href="#retention-labels">Retention labels</a></li><li><a href="#sensitivity-labels">Sensitivity labels</a><ul><li><a href="#unofficial">UNOFFICIAL</a></li><li><a href="#official">OFFICIAL</a></li><li><a href="#official-sensitive-group">OFFICIAL: Sensitive (Group)</a></li><li><a href="#official-sensitive">OFFICIAL: Sensitive</a></li><li><a href="#protected-group">PROTECTED (Group)</a></li></ul></li><li><a href="#sensitivity-label-policy">Sensitivity label policy</a></li><li><a href="#data-loss-prevention-dlp-compliance-policy">Data Loss Prevention (DLP) compliance policy</a></li><li><a href="#auto-labelling-policy">Auto-labelling policy</a></li></ul></li><li><a href="#microsoft-365-defender">Microsoft 365 Defender</a><ul><li><a href="#safe-links">Safe Links</a><ul><li><a href="#global-settings">Global Settings</a></li><li><a href="#policy">Policy</a></li></ul></li><li><a href="#safe-attachments">Safe Attachments</a><ul><li><a href="#global-settings-1">Global Settings</a></li><li><a href="#policy-1">Policy</a></li></ul></li><li><a href="#anti-phishing">Anti-phishing</a></li></ul></li></ul>
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-task-sequence.html">Hybrid - task sequence deploy</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-network-configuration.html">Hybrid - network configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/admin-disable-inactive-users.html">Administration - disable inactive accounts automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wdac-policy-creation.html">WDAC policy creation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wfw-rules-import.html">Windows Firewall rules import</a>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Office 365</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+86 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <h2 id="organisation">Organisation</h2>
+
+<p>The ABAC settings for the Agency organisation for all implementation types can be found below. This includes Residency, Licensing and Licensing Manual Groups, Theme, Add-ins and Security and Privacy settings.</p>
+
+<p>Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 Admin center &gt; Settings &gt; Org settings &gt; Organization profile &gt; Organization information</code></p>
+
+<p>The following table describes the Office 365 Organization profile settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Agency Name</td>
+    </tr>
+    <tr>
+      <td>Street address</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>ZIP or postal code</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>Country or region</td>
+      <td>Australia</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>Technical Contact</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>Preferred Language</td>
+      <td>English</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="licensing">Licensing</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 Admin center &gt; Billing</code></p>
+
+<p>The following table describes the Microsoft 365 Licensing settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Quantity</td>
+    </tr>
+    <tr>
+      <td>Microsoft 365 E5</td>
+      <td>100,000</td>
+    </tr>
+    <tr>
+      <td>Microsoft Power Automate Free</td>
+      <td>10,000</td>
+    </tr>
+    <tr>
+      <td>Office 365 E5</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Microsoft Power Apps Plan 2 Trial</td>
+      <td>10,000</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="licensing-manual-groups">Licensing manual groups</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Azure Active Directory &gt; Licenses &gt; All products &gt; Microsoft 365 E5 &gt; Licensed groups </code></p>
+
+<p>The following table describes the configuration for the manual allocation of Microsoft 365 E5 licenses for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>rol-Agency-Administrators</td>
+      <td>Active</td>
+    </tr>
+    <tr>
+      <td>rol-Agency-Users</td>
+      <td>Active</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="theme">Theme</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 admin center &gt; Settings &gt; Org settings &gt; Organization profile &gt; Custom themes</code></p>
+
+<p>The following table describes the Custom Theme settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Use a custom logo image</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Use an image from a URL</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Make the logo clickable</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Select background image</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Navigation bar colour</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Text and icon colour</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Accent colour</td>
+      <td>Agency supplied</td>
+    </tr>
+    <tr>
+      <td>Prevent users from overriding their theme</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Show the user’s display name</td>
+      <td>Enabled</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">Endpoint Manager admin center &gt; Tenant administration &gt; Customization</code></p>
+
+<ul>
+  <li>Branding
+    <ul>
+      <li>Organization name: <code class="language-plaintext highlighter-rouge">&lt;Agency Name&gt;</code></li>
+      <li>Theme color: Agency supplied</li>
+      <li>Show in header: <code class="language-plaintext highlighter-rouge">Organization logo only</code></li>
+      <li>Upload logo for theme color background: Agency supplied</li>
+      <li>Upload logo for theme color light background: Agency supplied</li>
+      <li>Upload brand image: Agency supplied</li>
+    </ul>
+  </li>
+  <li>Support information
+    <ul>
+      <li>Contact name: <code class="language-plaintext highlighter-rouge">&lt;Agency Acronym&gt; IT Service Desk</code></li>
+      <li>Phone number: <code class="language-plaintext highlighter-rouge">&lt;Agency Support Telephone Number&gt;</code></li>
+      <li>Email address: <code class="language-plaintext highlighter-rouge">ITServiceDesk@Agency.gov.au</code></li>
+      <li>Website name: -</li>
+      <li>Website URL: -</li>
+      <li>Additional information: -</li>
+    </ul>
+  </li>
+  <li>Configuration
+    <ul>
+      <li>Device enrollment: <code class="language-plaintext highlighter-rouge">Available, with prompts</code></li>
+      <li>Privacy messages in Company Portal for iOS/iPadOS: <code class="language-plaintext highlighter-rouge">Default</code></li>
+      <li>Privacy statement URL: -</li>
+      <li>Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only): <code class="language-plaintext highlighter-rouge">No</code></li>
+      <li>Hide remove button on corporate Windows devices: <code class="language-plaintext highlighter-rouge">Yes</code></li>
+      <li>Hide reset button on corporate Windows devices: <code class="language-plaintext highlighter-rouge">No</code></li>
+      <li>Hide remove button on corporate iOS/iPadOS devices: <code class="language-plaintext highlighter-rouge">No</code></li>
+      <li>Hide reset button on corporate iOS/iPadOS devices: <code class="language-plaintext highlighter-rouge">No</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="add-ins">Add-ins</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 admin center &gt; Settings &gt; Org settings &gt; Services</code></p>
+
+<p>The following table describes the Microsoft 365 Services settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Azure Speech Services</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Bookings</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>‎Briefing‎ email from ‎Microsoft Viva‎</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Calendar</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Cortana</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>‎Microsoft‎ communication to users</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Microsoft Forms</td>
+      <td>Send a link to the form and collect responses: Unchecked<br />Share to collaborate on the form layout and structure: Unchecked<br />Share the form as a template that can be duplicated: Unchecked<br />Share form results summary: Unchecked<br />Record names by default: Unchecked<br />Include Bing search, YouTube videos: Unchecked<br />Add internal phishing protection: Checked</td>
+    </tr>
+    <tr>
+      <td>Microsoft Graph Data Connect</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Planner</td>
+      <td>‎iCalendar‎ publishing: Unchecked</td>
+    </tr>
+    <tr>
+      <td>Microsoft Search in Bing homepage</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Microsoft Teams</td>
+      <td>Advanced management options: Checked<br />Guest access: Checked</td>
+    </tr>
+    <tr>
+      <td>Microsoft To Do</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>‎Viva Insights (formerly MyAnalytics)‎</td>
+      <td>Insights dashboard: Checked<br />Weekly digest: Checked<br />Insights Outlook add-in: Checked<br />Allow Microsoft to contact me about my feedback: Unchecked</td>
+    </tr>
+    <tr>
+      <td>Microsoft 365 Groups</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Modern Authentication</td>
+      <td>Turn on modern authentication for Outlook 2013 for Windows and later (recommended): Checked<br />Allow access to basic authentication protocols: Unchecked (All)</td>
+    </tr>
+    <tr>
+      <td>News</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>‎Office‎ installation options</td>
+      <td>Once a month (Monthly Enterprise Channel)<br />Apps for Windows and mobile devices: Office (includes Skype for Business)<br />Apps for Mac: Office</td>
+    </tr>
+    <tr>
+      <td>Office on the web (third-party storage services)</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Office Scripts</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Reports</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>SharePoint</td>
+      <td>Users can share with: New and existing guests - guests must sign in or provide a verification code</td>
+    </tr>
+    <tr>
+      <td>Sway</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>User consent to apps</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>User owned apps and services</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Viva Learning</td>
+      <td>Diagnostic data: Unchecked<br />LinkedIn Learning: Unchecked<br />Microsoft Learn: Unchecked<br />Microsoft 365 Training: Unchecked<br />SharePoint: Unchecked</td>
+    </tr>
+    <tr>
+      <td>Whiteboard</td>
+      <td>Turn on Whiteboard for everyone in your org: Checked<br />Level of diagnostic data to send to Microsoft: Neither<br />Allow the use of optional connected experiences in Whiteboard: Unchecked<br />Enable easy sharing of Whiteboard from Surface Hub: Unchecked<br />Enable storing new whiteboards in OneDrive: Unchecked</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="security-and-privacy">Security and privacy</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 admin center &gt; Org Settings &gt; Security &amp; privacy</code></p>
+
+<p>The following table describes the Microsoft 365 Security and Privacy settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>‎Bing‎ data collection</td>
+      <td>Disabled</td>
+    </tr>
+    <tr>
+      <td>Customer lockbox</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Password expiration policy</td>
+      <td>Enabled<br />Days before passwords expire: 365<br />Days before a user is notified about expiration: 14</td>
+    </tr>
+    <tr>
+      <td>Privacy profile</td>
+      <td>Enabled (Agency to define)</td>
+    </tr>
+    <tr>
+      <td>Privileged access</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Sharing</td>
+      <td>Disabled</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="exchange-online">Exchange Online</h2>
+
+<p>The ABAC settings for the Agencies Exchange Online instance can be found below. This includes connectors, Mail Exchange (MX) records, SPF, DMARC, DKIM, Remote Domains, User mailbox configurations, Authentication Policies, Outlook on the Web policies, Mailbox Archiving, and Address lists.</p>
+
+<p>Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<h3 id="connectors">Connectors</h3>
+
+<h4 id="cloud-native-implementation-types">Cloud-native implementation types</h4>
+
+<p>Cloud-native connector configuration assumes Office 365 is not configured with a 3rd party gateway for mail flow.</p>
+
+<p>Agencies that are required to route traffic through a 3rd party mail gateway will require connectors to be configured.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online admin center &gt; Mail flow &gt; Connectors</code></p>
+
+<p>The following table describes the Exchange Online inbound mail connectors for a Cloud-native implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Not configured</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table describes the Exchange Online outbound mail connectors for a Cloud-native implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Not configured</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="hybrid-implementation-types">Hybrid implementation types</h4>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online admin center &gt; Mail flow &gt; Connectors</code></p>
+
+<p>The following table describes the Exchange Online inbound mail connectors for a Hybrid implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>From</td>
+      <td>Your Organization’s email server</td>
+    </tr>
+    <tr>
+      <td>To</td>
+      <td>Office 365</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Retain internal Exchange email headers (recommended)</td>
+      <td>Enable</td>
+    </tr>
+    <tr>
+      <td>How to identify your organization</td>
+      <td>Identify the organization by verifying that messages are coming Inbound from xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
+    </tr>
+    <tr>
+      <td>Security restrictions</td>
+      <td>Reject messages if they aren’t encrypted using Transport Layer Security ‎(TLS)‎, or the subject name on the certificate that the organization uses to authenticate with Office 365 doesn’t‎ match this domain name: <code class="language-plaintext highlighter-rouge">*.Agency.gov.au</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table describes the Exchange Online outbound mail connectors for a Hybrid implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>From</td>
+      <td>Office 365</td>
+    </tr>
+    <tr>
+      <td>To</td>
+      <td>Your Organization’s email server</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Retain internal Exchange email headers (recommended)</td>
+      <td>Enable</td>
+    </tr>
+    <tr>
+      <td>How to identify your organization</td>
+      <td>Identify the organization by verifying that messages are going outbound from xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</td>
+    </tr>
+    <tr>
+      <td>When to use the connector</td>
+      <td>Only when email messages are sent to these domains: *</td>
+    </tr>
+    <tr>
+      <td>Routing method</td>
+      <td>Route email messages through these smart hosts: Agency.gov.au</td>
+    </tr>
+    <tr>
+      <td>Security restrictions</td>
+      <td>Always use Transport Layer Security ‎(TLS)‎ and connect only if the recipient’s email server certificate is issued by a trusted certificate authority ‎(CA)‎, and the subject name matches this domain: <code class="language-plaintext highlighter-rouge">mail.Agency.gov.au</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mx-records">MX records</h3>
+
+<p>MX records are not set within Azure or Exchange and have been configured with the hosting provider.</p>
+
+<p>Note, cloud-native MX configuration assumes Office 365 is not configured with a 3rd party gateway for mail flow.</p>
+
+<p>Agencies that are required to route traffic through a 3rd party mail gateway will point MX record to the 3rd party gateway.</p>
+
+<p>The following table describes the MX records that have been configured per implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Implementation</th>
+      <th>Domain</th>
+      <th>MX Preferences</th>
+      <th>Mail Exchanger</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud-native</td>
+      <td>Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td><code class="language-plaintext highlighter-rouge">Agency-gov-au.mail.protection.outlook.com</code></td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;agency mx provider&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="spf-and-dmarc-records">SPF and DMARC records</h3>
+
+<p>Note, SPF and DMARC DNS records are configured through the agency’s DNS provider. DMARC and SPF configuration is unique to the agency. The following configuration are included as examples.</p>
+
+<p>The following table describes the SPF records have been configured per implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Implementation</th>
+      <th>Domain</th>
+      <th>SPF Record</th>
+      <th>DMARC Policy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud-native</td>
+      <td>Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">"v=spf1 include:spf.protection.outlook.com -all"</code></td>
+      <td><code class="language-plaintext highlighter-rouge">"v=DMARC1; p=reject; pct=100; rua=mailto:&lt;rua reporting address&gt;; ruf=mailto:&lt;ruf reporting address&gt;; fo=1"</code></td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>Agency.gov.au</td>
+      <td>Specific to gateway provider</td>
+      <td><code class="language-plaintext highlighter-rouge">"v=DMARC1; p=reject; pct=100; rua=mailto:&lt;rua reporting address&gt;; ruf=mailto:&lt;ruf reporting address&gt;; fo=1"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dkim-records">DKIM records</h3>
+
+<p>Note, DKIM DNS selector records are configured through the agency’s DNS provider. Cloud-native configuration assumes DKIM signing is handled by Exchange Online Protection and not a third-party selector.</p>
+
+<p>The following table describes the DKIM records configuration settings per implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Implementation</th>
+      <th>Type</th>
+      <th>Domain</th>
+      <th>Host name</th>
+      <th>TTL</th>
+      <th>Points to address or value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud-native</td>
+      <td>CNAME</td>
+      <td>Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">selector1._domainkey </code></td>
+      <td><code class="language-plaintext highlighter-rouge">5 Min.</code></td>
+      <td><code class="language-plaintext highlighter-rouge">selector1-agency-gov-au._domainkey.&lt;agencyinitialdomain&gt;.onmicrosoft.com.</code></td>
+    </tr>
+    <tr>
+      <td>Cloud-native</td>
+      <td>CNAME</td>
+      <td>Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">selector2._domainkey </code></td>
+      <td><code class="language-plaintext highlighter-rouge">5 Min.</code></td>
+      <td><code class="language-plaintext highlighter-rouge">selector2-agency-gov-au._domainkey.&lt;agencyinitialdomain&gt;.onmicrosoft.com.</code></td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>CNAME</td>
+      <td>Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;gateway provided selector&gt;</code></td>
+      <td><code class="language-plaintext highlighter-rouge">5 Min.</code></td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;gateway provided selector&gt;</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="dns-records">DNS records</h3>
+
+<p>Note, the Autodiscover service external DNS entry is specific to the Hybrid implementation of the Agency. Once all mailboxes have been migrated to Office 365 within a Hybrid configuration this can be pointed as an alias to the Office 365 Autodiscover service using <code class="language-plaintext highlighter-rouge">autodiscover.outlook.com</code>.</p>
+
+<p>Hybrid implementation types will require additional external DNS records depending on the hybrid implementation (classic or modern). The additional certificate requirements for hybrid can be located at - <a href="https://docs.microsoft.com/en-us/exchange/certificate-requirements">certificate requirements for hybrid deployments</a>.</p>
+
+<p>The following table describes the DNS record settings for Agency.gov.au (default) per implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Implementation</th>
+      <th>Type</th>
+      <th>Priority</th>
+      <th>Host name</th>
+      <th>Points to address or value</th>
+      <th>TTL</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud-native</td>
+      <td>MX</td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td>Agency Domain</td>
+      <td><code class="language-plaintext highlighter-rouge">Agency-gov-au.mail.protection.outlook.com</code></td>
+      <td>1 hour</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>MX</td>
+      <td><code class="language-plaintext highlighter-rouge">10</code></td>
+      <td>Agency Domain</td>
+      <td>Agency mx provider address.</td>
+      <td>1 hour</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>CNAME</td>
+      <td>-</td>
+      <td>Agency Edge Transport address</td>
+      <td>Agency edge transport gateway address.</td>
+      <td>1 hour</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>CNAME</td>
+      <td>-</td>
+      <td>Agency CAS/EWS NAT address</td>
+      <td>Agency CAS/EWS NAT when using hybrid classic full.</td>
+      <td>1 hour</td>
+    </tr>
+    <tr>
+      <td>All</td>
+      <td>TXT</td>
+      <td>-</td>
+      <td>Agency Domain</td>
+      <td>Text string provided by Office 365 domain setup wizard.</td>
+      <td>1 hour</td>
+    </tr>
+    <tr>
+      <td>Cloud-native</td>
+      <td>CNAME</td>
+      <td>-</td>
+      <td>Autodiscover.Agency.gov.au</td>
+      <td><code class="language-plaintext highlighter-rouge">autodiscover.outlook.com</code></td>
+      <td>1 hour</td>
+    </tr>
+    <tr>
+      <td>Hybrid</td>
+      <td>CNAME</td>
+      <td>-</td>
+      <td>Autodiscover.Agency.gov.au</td>
+      <td>Agency autodiscover NAT address.</td>
+      <td>1 hour</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="accepted-domains">Accepted domains</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online admin centre &gt; Mail flow &gt; Accepted domains</code></p>
+
+<p>The following table describes the Accepted Domains settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Accepted Domain</th>
+      <th>Domain Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Agency.gov.au (default)</td>
+      <td>Agency.gov.au</td>
+      <td>Authoritative</td>
+    </tr>
+    <tr>
+      <td>Agency.onmicrosoft.com</td>
+      <td>Agency.onmicrosoft.com</td>
+      <td>Authoritative</td>
+    </tr>
+    <tr>
+      <td>Agency.mail.onmicrosoft.com</td>
+      <td>Agency.mail.onmicrosoft.com</td>
+      <td>Authoritative</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="remote-domains">Remote domains</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online admin centre &gt; Mail flow &gt; Remote domains</code></p>
+
+<p>Note, existing remote domains configuration for hybrid implementations can be transferred to Exchange Online during the hybrid wizard using the <a href="https://docs.microsoft.com/en-us/exchange/org-config-transfer-attributes/org-config-transfer-attributes">Organization configuration transfer</a> option.</p>
+
+<p>The following table describes the Remote Domains have been configured for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Default</td>
+    </tr>
+    <tr>
+      <td>Remote Domain</td>
+      <td>*</td>
+    </tr>
+    <tr>
+      <td>Allowed Out Of Office Type</td>
+      <td>Allow only external out of office replies</td>
+    </tr>
+    <tr>
+      <td>Allow automatic replies</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow automatic forwarding</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow delivery reports</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow non-delivery reports</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow meeting forward notifications</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Use rich-text format</td>
+      <td>Follow users settings</td>
+    </tr>
+    <tr>
+      <td>MIME character set</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Non-MIME character set</td>
+      <td>None</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="organisational-add-ins">Organisational add-ins</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online admin center &gt; Organization &gt; Add-ins</code></p>
+
+<p>No organisational add-ins have been configured.</p>
+
+<h3 id="cas-mailbox-plan">CAS mailbox plan</h3>
+
+<p>Please note, CAS mailbox plan can be retrieved (or set) through Exchange Online PowerShell. The policy objects are Exchange Online out of box policies, that require minimal edit.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-CASMailboxPlan</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Format-Table</span><span class="w"> </span><span class="nt">-Auto</span><span class="w"> </span><span class="nx">DisplayName</span><span class="p">,</span><span class="nx">ActiveSyncEnabled</span><span class="p">,</span><span class="nx">ImapEnabled</span><span class="p">,</span><span class="nx">PopEnabled</span><span class="p">,</span><span class="nx">OwaMailboxPolicy</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The following table describes the mailbox plans have been configured for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>ExchangeOnlineEnterprise</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncMailboxPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncDebugLogging</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>DisplayName</td>
+      <td>ExchangeOnlineEnterprise</td>
+    </tr>
+    <tr>
+      <td>ECPEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ImapEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ImapMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>ImapEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapForceICalForCalendarRetrievalOption</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MapiHttpEnabled</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookNonCachedMode</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookVersions</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookRpcHttp</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PublicFolderClientAccess</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookExternalConnectivity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>OwaMailboxPolicy</td>
+      <td>OwaMailboxPolicy-Default</td>
+    </tr>
+    <tr>
+      <td>OWAEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OWAforDevicesEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopMessageDeleteEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>PopEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopForceICalForCalendarRetrievalOption</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>RemotePowerShellEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>UniversalOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OutlookMobileEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MacOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsAllowOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowMacOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowEntourage</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsApplicationAccessPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsBlockList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>Item</strong></td>
+      <td><strong>Configuration</strong></td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>ExchangeOnlineDeskless</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncDebugLogging</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncMailboxPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>DisplayName</td>
+      <td>ExchangeOnlineDeskless</td>
+    </tr>
+    <tr>
+      <td>ECPEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsAllowEntourage</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowMacOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsApplicationAccessPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsBlockList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapForceICalForCalendarRetrievalOption</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>ImapProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MacOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookExternalConnectivity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookNonCachedMode</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookRpcHttp</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookVersions</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MapiHttpEnabled</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>OutlookMobileEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OWAEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OWAforDevicesEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OwaMailboxPolicy</td>
+      <td>OwaMailboxPolicy-Default</td>
+    </tr>
+    <tr>
+      <td>PopEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopForceICalForCalendarRetrievalOption</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopMessageDeleteEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>PopProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PublicFolderClientAccess</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>RemotePowerShellEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>UniversalOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td><strong>Item</strong></td>
+      <td><strong>Configuration</strong></td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>ExchangeOnlineEssentials</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncMailboxPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncDebugLogging</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ECPEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ImapEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ImapMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>ImapEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapForceICalForCalendarRetrievalOption</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MapiHttpEnabled</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookNonCachedMode</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookVersions</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookRpcHttp</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PublicFolderClientAccess</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookExternalConnectivity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>OwaMailboxPolicy</td>
+      <td>OwaMailboxPolicy-Default</td>
+    </tr>
+    <tr>
+      <td>OWAEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OWAforDevicesEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopMessageDeleteEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>PopEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopForceICalForCalendarRetrievalOption</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>RemotePowerShellEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>UniversalOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OutlookMobileEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MacOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsAllowOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowMacOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowEntourage</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsApplicationAccessPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsBlockList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>Item</strong></td>
+      <td><strong>Configuration</strong></td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>ExchangeOnline</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncMailboxPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncDebugLogging</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ActiveSyncSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ECPEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ImapEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ImapMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>ImapEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>ImapForceICalForCalendarRetrievalOption</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MapiHttpEnabled</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookNonCachedMode</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookVersions</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookRpcHttp</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PublicFolderClientAccess</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>MAPIBlockOutlookExternalConnectivity</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>OwaMailboxPolicy</td>
+      <td>OwaMailboxPolicy-Default</td>
+    </tr>
+    <tr>
+      <td>OWAEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OWAforDevicesEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopMessageDeleteEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopUseProtocolDefaults</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>PopMessagesRetrievalMimeFormat</td>
+      <td>BestBodyFormat</td>
+    </tr>
+    <tr>
+      <td>PopEnableExactRFC822Size</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopProtocolLoggingEnabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopSuppressReadReceipt</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>PopForceICalForCalendarRetrievalOption</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>RemotePowerShellEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>UniversalOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OutlookMobileEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>MacOutlookEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsEnabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>EwsAllowOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowMacOutlook</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowEntourage</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsApplicationAccessPolicy</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsAllowList</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td>EwsBlockList</td>
+      <td>–</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mailbox-attributes">Mailbox attributes</h3>
+
+<p>The following describes the Mailbox attribute that have been configured.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Admin Center &gt; Recipients &gt; Mailboxes &gt; &lt;username&gt; &gt; mailbox features</code></p>
+
+<ul>
+  <li>Litigation hold: <code class="language-plaintext highlighter-rouge">False</code> (configured as true only when required)</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Admin Center &gt; Recipients &gt; Mailboxes &gt; &lt;username&gt; &gt; mailbox usage</code></p>
+
+<ul>
+  <li>Exchange Mailbox Size: <code class="language-plaintext highlighter-rouge">100GB per user</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Admin Center &gt; Recipients &gt; Mailboxes &gt; Set default message size restrictions</code></p>
+
+<ul>
+  <li>Maximum size for sent messages (KB): <code class="language-plaintext highlighter-rouge">90MB</code></li>
+  <li>Maximum size for received messages (KB): <code class="language-plaintext highlighter-rouge">90MB</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Admin Center &gt; Recipients &gt; Mailboxes &gt; &lt;username&gt; &gt; email address</code></p>
+
+<ul>
+  <li>Custom Primary SMTP Addressing: <code class="language-plaintext highlighter-rouge">FirstName.LastName@&lt;Agency&gt;.gov.au</code></li>
+  <li>Language: <code class="language-plaintext highlighter-rouge">English (en-au)</code></li>
+  <li>Default Time Zone: <code class="language-plaintext highlighter-rouge">GMT +10 (AUS Eastern Standard Time)</code></li>
+  <li>Exchange Online PowerShell
+    <ul>
+      <li>Disabled for standard users: <code class="language-plaintext highlighter-rouge">True</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="authentication-policy">Authentication policy</h3>
+
+<p>Please note, authentication policies can be retrieved (or set) through Exchange Online PowerShell. If the setting for block legacy authentication is in the Microsoft Admin portal, a policy named <strong>BlockBasic</strong> is created but it does not turn off all the basic authentication parameters.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-AuthenticationPolicy</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To update the default <code class="language-plaintext highlighter-rouge">BlockBasic</code> policy, run the following PowerShell command.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-AuthenticationPolicy</span><span class="w"> </span><span class="nt">-Identity</span><span class="w"> </span><span class="s2">"BlockBasic&lt;number&gt;"</span><span class="w"> </span><span class="nt">-AllowBasicAuthOutlookService</span><span class="p">:</span><span class="bp">$false</span><span class="w"> </span><span class="nt">-AllowBasicAuthReportingWebServices</span><span class="p">:</span><span class="bp">$false</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If a new custom policy is created that blocks the specific parameters, then it can be set as a default for the whole organisation using the following PowerShell command.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-OrganizationConfig</span><span class="w"> </span><span class="nt">-DefaultAuthenticationPolicy</span><span class="w"> </span><span class="s2">"Agency Authentication Policy"</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The following table describes the Authentication Policy configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Agency Authentication Policy</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication ActiveSync</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication Autodiscover</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication IMAP</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication MAPI</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication Offline AddressBook</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication Outlook Service</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication POP</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication Reporting Web Services</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication Rest</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication RPC</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication SMTP</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication Web Services</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Basic Authentication PowerShell</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="outlook-web-access-policy">Outlook Web Access policy</h3>
+
+<p>Please note, Outlook Web Access policies can be retrieved (or set) through Exchange Online PowerShell. The policy object is Exchange Online out of box policy, that requires minimal edit.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-OwaMailboxPolicy</span><span class="w"> </span><span class="nt">-identity</span><span class="w"> </span><span class="nx">OwaMailboxPolicy-Default</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The following table describes the Outlook Web Access Policy configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OwaMailboxPolicy-Default</td>
+    </tr>
+    <tr>
+      <td>Wac Editing Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Print Without Download Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OneDrive Attachments Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Additional Storage Providers Available</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Classic Attachments Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Reference Attachments Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Save Attachments to Cloud Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>External Image Proxy Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Nps Surveys Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Message Previews Disabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Personal Account Calendars Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Teamsnap Calendars Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Bookings Mailbox Creation Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Project Moca Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Direct File Access On Public Computers Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Direct File Access On Private Computers Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Wac Viewing On Public Computers Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Wac Viewing On Private Computers Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Force Wac Viewing First On Public Computers</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Force Wac Viewing First On Private Computers</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Action For Unknown File And MIME Types</td>
+      <td>Allow</td>
+    </tr>
+    <tr>
+      <td>Feedback Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Phonetic Support Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Default Client Language</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Use GB18030</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Use ISO885915</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Outbound Charset</td>
+      <td>AutoDetect</td>
+    </tr>
+    <tr>
+      <td>Global Address List Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Organization Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Explicit Logon Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>OWA Light Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Delegate Access Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>IRM Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Calendar Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Contacts Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Tasks Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Journal Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Notes Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>On Send Addins Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Reminders And Notifications Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Premium Client Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Spell Checker Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Classic Attachments Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Search Folders Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Signatures Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Theme Selection Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>UM Integration Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>WSS Access On Public Computers Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>WSS Access On Private Computers Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Change Password Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>ActiveSync Integration Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>All Address Lists Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Rules Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Public Folders Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Recover Deleted Items Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Instant Messaging Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Text Messaging Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Force Save Attachment Filtering Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Silverlight Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Instant Messaging Type</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <td>Display Photos Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Set Photo Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Places Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Weather Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Local Events Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Interesting Calendars Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Allow Copy Contacts To Device Address Book</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Predicted Actions Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>User Diagnostic Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Facebook Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>LinkedIn Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Wac External Services Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Wac OMEX Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Report Junk Email Enabled</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>Group Creation Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Skip Create Unified Group Custom SharePoint Classification</td>
+      <td>True</td>
+    </tr>
+    <tr>
+      <td>User Voice Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Satisfaction Enabled</td>
+      <td>False</td>
+    </tr>
+    <tr>
+      <td>Outlook Beta Toggle Enabled</td>
+      <td>False</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mailbox-archive">Mailbox archive</h3>
+
+<p>For Hybrid implementation types, the Archive is configured using the On-Premises Exchange Administrator Console or PowerShell.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Admin Center &gt; recipients &gt; mailboxes &gt; &lt;username&gt; &gt; mailbox features</code></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Enable-RemoteMailbox</span><span class="w"> </span><span class="nt">-Identity</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="w"> </span><span class="nt">-Archive</span><span class="w">
+</span></code></pre></div></div>
+
+<p>For Cloud-native implementation types, the Archive is configured using the Exchange Online Admin Center or Exchange Online PowerShell.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online Admin Center &gt; recipients &gt; mailboxes &gt; &lt;username&gt; &gt; mailbox features</code></p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Enable-Mailbox</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="w"> </span><span class="nt">-Archive</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The following table describes the mailbox archive settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Archiving</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Auto-Expanding Archive (via PowerShell command in Exchange Online)</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Archive Configuration</td>
+      <td>Configured</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following PowerShell command enables the Auto Expanding Archive using the Exchange Online module.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-OrganizationConfig</span><span class="w"> </span><span class="nt">-AutoExpandingArchive</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="mailbox-auditing">Mailbox auditing</h3>
+
+<p>User Mailbox and Shared Mailbox audit actions are set using the global defaults, this avoids having a per mailbox audit configuration. For more information on each audit type in Exchange Online and additional per-mailbox configuration options, see <a href="https://docs.microsoft.com/en-us/microsoft-365/compliance/enable-mailbox-auditing?view=o365-worldwide#mailbox-actions-for-user-mailboxes-and-shared-mailboxes">Manage mailbox auditing</a>.</p>
+
+<p>Mailbox auditing settings can be set and retrieved using Exchange Online PowerShell.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-OrganizationConfig</span><span class="w"> </span><span class="nt">-AuditDisabled</span><span class="w"> </span><span class="bp">$true</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The following table describes the mailbox archive settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mailbox Auditing</td>
+      <td>Enabled for organisation by default</td>
+    </tr>
+    <tr>
+      <td>Centralized Logging</td>
+      <td>Not configured<br />E5 subscriptions log search is via the Microsoft 365 Purview.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="mail-flow-rules">Mail flow rules</h3>
+
+<p>The following mail flow rules have been configured for all implementation types.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online Admin Centre &gt; Mail flow &gt; Rules</code></p>
+
+<h4 id="outgoing-x-protective-marker-multiple-rules">Outgoing X-Protective-Marker (multiple rules)</h4>
+
+<p>Note 1, the <code class="language-plaintext highlighter-rouge">x-protective-marking</code> rules listed here are not exhaustive and are an example that can be used for each classification used within the Agency.</p>
+
+<p>Note 2, as of February 2022 the ability to add the <code class="language-plaintext highlighter-rouge">ORIGIN=user@agency.gov.au</code> parameter is not possible using a transport rule. If the Agency has the ability to transform mail messages using a gateway appliance then this is the current recommended approach for updating header values.</p>
+
+<p>To find the <code class="language-plaintext highlighter-rouge">MSIP_Label</code> “guid” IDs for each sensitivity label use the <a href="https://docs.microsoft.com/en-us/powershell/exchange/scc-powershell?view=exchange-ps">Security &amp; Compliance Center PowerShell Modules</a>.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Connect-IPPSSession</span><span class="w"> </span><span class="nt">-UserPrincipalName</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">admin</span><span class="err">&gt;@&lt;</span><span class="nx">agency</span><span class="err">&gt;</span><span class="o">.</span><span class="nf">onmicrosoft</span><span class="o">.</span><span class="nf">com</span><span class="w">
+
+</span><span class="n">Get-label</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">where</span><span class="p">{</span><span class="bp">$_</span><span class="o">.</span><span class="nf">Name</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="s2">"U"</span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="n">select</span><span class="w"> </span><span class="nx">name</span><span class="p">,</span><span class="nx">guid</span><span class="w">
+</span></code></pre></div></div>
+
+<ul>
+  <li>If the message header includes:  <code class="language-plaintext highlighter-rouge">msip_labels</code> header contains <code class="language-plaintext highlighter-rouge">MSIP_Label_XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX_Enabled=true</code></li>
+  <li>Take the following actions: Set the message header with this value: <code class="language-plaintext highlighter-rouge">X-Protective-Marking</code> to the value <code class="language-plaintext highlighter-rouge">VER=2018.4, NS=gov.au, SEC=&lt;CLASSIFICATION&gt;, CAVEAT=&lt;CAVEAT&gt;, ACCESS=&lt;IMM&gt;</code></li>
+  <li>HeaderContainsMessageHeader: <code class="language-plaintext highlighter-rouge">msip_labels</code></li>
+  <li>HeaderContainsWords: <code class="language-plaintext highlighter-rouge">MSIP_Label_XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX_Enabled=true</code></li>
+  <li>Mode: <code class="language-plaintext highlighter-rouge">Enforce</code></li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Outgoing X-Protective-Marker &lt;Classification&gt;</code></li>
+  <li>Priority: <code class="language-plaintext highlighter-rouge">0</code></li>
+  <li>State: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+</ul>
+
+<h4 id="apply-disclaimer">Apply Disclaimer</h4>
+
+<p>Note, the disclaimer text is provided as an example only and is typically unique across Agencies.</p>
+
+<ul>
+  <li>Apply this rule if: The recipient is located <code class="language-plaintext highlighter-rouge">Outside the organization</code></li>
+  <li>Do the following actions: Append the message with the disclaimer
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'&lt;br&gt;
+&lt;br&gt;
+&lt;p style="font-size:8pt; line-height:10pt; font-family: 'Cambria','times roman',serif;"&gt;The content of this email is confidential and intended for the recipient specified in message only. It is strictly forbidden to share any part of this message with any third party, without a written consent of the sender. If you received this message by mistake, please reply to this message and follow with its deletion, so that we can ensure such a mistake does not occur in the future.&lt;/p&gt;'. 
+</code></pre></div>    </div>
+  </li>
+  <li>If the disclaimer can’t be applied, reject the message.</li>
+  <li>ExceptIfSubjectMatchesPatterns: -</li>
+  <li>FromScope: -</li>
+  <li>HeaderContainsMessageHeader: -</li>
+  <li>HeaderContainsWords: -</li>
+  <li>Mode: <code class="language-plaintext highlighter-rouge">Enforce</code></li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Disclaimer</code></li>
+  <li>PrependSubject: -</li>
+  <li>Priority: <code class="language-plaintext highlighter-rouge">1</code></li>
+  <li>SentToScope: <code class="language-plaintext highlighter-rouge">NotInOrganization</code></li>
+  <li>State: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+</ul>
+
+<h3 id="journaling">Journaling</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online Admin Centre (Classic) &gt; compliance management &gt; journal rules</code> is not configured for all implementation types.</p>
+
+<h3 id="mailbox-retention">Mailbox retention</h3>
+
+<p>Existing retention configuration for hybrid implementations can be transferred to Exchange Online during the hybrid wizard using the <a href="https://docs.microsoft.com/en-us/exchange/org-config-transfer-attributes/org-config-transfer-attributes">Organization configuration transfer</a> option.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online Admin Centre (Classic)&gt; compliance management &gt; retention polices</code></p>
+
+<p>The following table describes the Mailbox Retention settings within the “Default MRM Policy” for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Retention Period</th>
+      <th>Retention Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Never Delete</td>
+      <td>Personal</td>
+      <td>Unlimited</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>Recoverable Items 14 days move to archive</td>
+      <td>Recoverable items</td>
+      <td>14 days</td>
+      <td>Archive</td>
+    </tr>
+    <tr>
+      <td>Junk Email</td>
+      <td>JunkEmail</td>
+      <td>30 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>Deleted Items</td>
+      <td>DeletedItems</td>
+      <td>30 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>Default 2 year move to archive</td>
+      <td>All</td>
+      <td>730 days</td>
+      <td>Archive</td>
+    </tr>
+    <tr>
+      <td>Personal 1 year move to archive</td>
+      <td>Personal</td>
+      <td>365 days</td>
+      <td>Archive</td>
+    </tr>
+    <tr>
+      <td>Personal never move to archive</td>
+      <td>Personal</td>
+      <td>Unlimited</td>
+      <td>Archive</td>
+    </tr>
+    <tr>
+      <td>1 Week Delete</td>
+      <td>Personal</td>
+      <td>7 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>1 Month Delete</td>
+      <td>Personal</td>
+      <td>30 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>Personal 5 year move to archive</td>
+      <td>Personal</td>
+      <td>1825 days</td>
+      <td>Archive</td>
+    </tr>
+    <tr>
+      <td>6 Month Delete</td>
+      <td>Personal</td>
+      <td>180 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>1 Year Delete</td>
+      <td>Personal</td>
+      <td>365 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+    <tr>
+      <td>5 Year Delete</td>
+      <td>Personal</td>
+      <td>1825 days</td>
+      <td>DeleteAndAllowRecovery</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="shared-mailboxes-and-resource-mailboxes">Shared mailboxes and resource mailboxes</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online Admin Centre &gt; Recipients &gt; Groups</code></p>
+
+<ul>
+  <li>Display name: <code class="language-plaintext highlighter-rouge">grp-&lt;Agency Acronym&gt;O365-Outlook</code>
+    <ul>
+      <li>Group email address: <code class="language-plaintext highlighter-rouge">grp-&lt;Agency Acronym&gt;0365-outlook@&lt;Agency&gt;.gov.au</code></li>
+      <li>Privacy: <code class="language-plaintext highlighter-rouge">Private – Only members can see content</code></li>
+      <li>Language: <code class="language-plaintext highlighter-rouge">English (Australia)</code></li>
+      <li>Subscribe new members: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Let people outside the organization send email to the group: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+      <li>Owners: <code class="language-plaintext highlighter-rouge">&lt;Agency Owner&gt; (Admin)</code></li>
+      <li>Members: <code class="language-plaintext highlighter-rouge">&lt;Agency Owner&gt; (Admin)</code></li>
+      <li>Delivery Management
+        <ul>
+          <li>Accept messages from: <code class="language-plaintext highlighter-rouge">All senders</code></li>
+          <li>Reject message from: <code class="language-plaintext highlighter-rouge">No senders</code></li>
+        </ul>
+      </li>
+      <li>Group Delegation
+        <ul>
+          <li>Send As: <code class="language-plaintext highlighter-rouge">None</code></li>
+          <li>Send on Behalf: <code class="language-plaintext highlighter-rouge">None</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Display name: <code class="language-plaintext highlighter-rouge">Grp-&lt;Agency Acronym&gt;O365-Teams</code>
+    <ul>
+      <li>Group email address: <code class="language-plaintext highlighter-rouge">Grp-&lt;Agency Acronym&gt;0365-Teams@&lt;Agency&gt;.gov.au</code></li>
+      <li>Privacy: <code class="language-plaintext highlighter-rouge">Private – Only members can see content</code></li>
+      <li>Language: <code class="language-plaintext highlighter-rouge">English (Australia)</code></li>
+      <li>Subscribe new members: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+      <li>Let people outside the organization send email to the group: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+      <li>Owners: <code class="language-plaintext highlighter-rouge">&lt;Agency Owner&gt; (Admin)</code></li>
+      <li>Members: <code class="language-plaintext highlighter-rouge">&lt;Agency Owner&gt; (Admin)</code></li>
+      <li>Delivery Management
+        <ul>
+          <li>Accept messages from: <code class="language-plaintext highlighter-rouge">All senders</code></li>
+          <li>Reject message from: <code class="language-plaintext highlighter-rouge">No senders</code></li>
+        </ul>
+      </li>
+      <li>Group Delegation
+        <ul>
+          <li>Send As: <code class="language-plaintext highlighter-rouge">None</code></li>
+          <li>Send on Behalf: `None</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="address-lists">Address lists</h3>
+
+<p>Existing address list configuration for hybrid implementations can be transferred to Exchange Online during the hybrid wizard using the <a href="https://docs.microsoft.com/en-us/exchange/org-config-transfer-attributes/org-config-transfer-attributes">Organization configuration transfer</a> option.</p>
+
+<p>Please note, address lists can be retrieved (or set) through Exchange Online PowerShell. The <em>‘Address Lists’</em> role within Exchange Online is required, for the account used to view or update Address lists.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-AddressList</span><span class="w"> </span><span class="nt">-identity</span><span class="w"> </span><span class="s1">'Address List Name'</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The following table describes the Address List configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All Contacts</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (((ObjectCategory -like 'person') -and (ObjectClass -eq 'contact'))))</code></td>
+    </tr>
+    <tr>
+      <td>All Distribution Lists</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (ObjectCategory -like 'group'))</code></td>
+    </tr>
+    <tr>
+      <td>All Rooms</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (((RecipientDisplayType -eq 'ConferenceRoomMailbox') -or (RecipientDisplayType -eq 'SyncedConferenceRoomMailbox'))))</code></td>
+    </tr>
+    <tr>
+      <td>All Users</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (((((((ObjectCategory -like 'person') -and (ObjectClass -eq 'user') -and (-not(Database -ne $null)) -and (-not(ServerLegacyDN -ne $null)))) -or (((ObjectCategory -like 'person') -and (ObjectClass -eq 'user') -and (((Database -ne $null) -or (ServerLegacyDN -ne $null))))))) -and (-not(RecipientTypeDetailsValue -eq 'GroupMailbox')))))</code></td>
+    </tr>
+    <tr>
+      <td>All Groups</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (RecipientTypeDetailsValue -eq 'GroupMailbox'))</code></td>
+    </tr>
+    <tr>
+      <td>Public Folders</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (ObjectCategory -like 'publicFolder'))</code></td>
+    </tr>
+    <tr>
+      <td>Offline Global Address List</td>
+      <td><code class="language-plaintext highlighter-rouge">((Alias -ne $null) -and (((((((((((ObjectClass -eq 'user') -or (ObjectClass -eq 'contact'))) -or (ObjectClass -eq 'msExchSystemMailbox'))) -or (ObjectClass -eq 'msExchDynamicDistributionList'))) -or (ObjectClass -eq 'group'))) -or (ObjectClass -eq 'publicFolder'))))</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="distribution-lists">Distribution lists</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Exchange Online Admin Centre &gt; recipients &gt; groups &gt; &lt;three dots&gt; &gt; Configure group naming policy</code></p>
+
+<ul>
+  <li>Group Naming Policy: <code class="language-plaintext highlighter-rouge">&lt;as per agency group naming standard&gt;</code></li>
+  <li>Blocked words: <code class="language-plaintext highlighter-rouge">None</code></li>
+</ul>
+
+<h2 id="exchange-online-protection">Exchange Online Protection</h2>
+
+<p>The ABAC settings for the Agency Exchange Online Protection instance can be found below. This includes the Connection Filtering, Anti-Malware, Policy Filtering, and Content Filtering configuration. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<h3 id="anti-spam">Anti-spam</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 security &gt; Policies &amp; rules &gt; Threat policies &gt; Anti-spam</code></p>
+
+<p>The following table describes the Connection filter policy configuration settings for per implementation type.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Implementation</th>
+      <th>Name</th>
+      <th>IP Allow List</th>
+      <th>IP Block List</th>
+      <th>Enable Safe List</th>
+      <th>Directory Based Edge Block Mode</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloud-native</td>
+      <td>Connection filter policy (Default)</td>
+      <td> </td>
+      <td> </td>
+      <td>True</td>
+      <td>Default</td>
+    </tr>
+    <tr>
+      <td>Hybird</td>
+      <td>Connection filter policy (Default)</td>
+      <td><code class="language-plaintext highlighter-rouge">&lt;agency smtp gateway IP adddresses for skip listing&gt;</code></td>
+      <td> </td>
+      <td>True</td>
+      <td>Default</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following tables describe the Anti-spam policies for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Anti-spam inbound policy (Default)</td>
+    </tr>
+    <tr>
+      <td>Bulk email spam action</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>Increase spam score</td>
+      <td>Image links to remote websites: On<br />Numeric IP address in URL: On<br />URL redirect to other port: On<br />Links to .biz or .info websites: On</td>
+    </tr>
+    <tr>
+      <td>Mark as spam</td>
+      <td>Empty messages: On<br />Embedded tags in HTML: Off<br />JavaScript or VBScript in HTML: On<br />Form tags in HTML: Off<br />Frame or iframe tags in HTML: Off<br />Web bugs in HTML: On<br />Object tags in HTML: On<br />Sensitive words: On<br />SPF record hard fail: On<br />Sender ID filtering hard fail: On<br />Backscatter: On</td>
+    </tr>
+    <tr>
+      <td>Spam</td>
+      <td>Move message to Junk email folder</td>
+    </tr>
+    <tr>
+      <td>High confidence spam</td>
+      <td>Quarantine message</td>
+    </tr>
+    <tr>
+      <td>Phishing</td>
+      <td>Quarantine message</td>
+    </tr>
+    <tr>
+      <td>Bulk</td>
+      <td>Move message to Junk email folder</td>
+    </tr>
+    <tr>
+      <td>Retain spam in quarantine for this many days</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Enable spam safety tips</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Enable zero-hour auto purge (ZAP)</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Enable for phishing messages</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Enable for spam messages</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Enable end-user spam notifications</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Send end-user spam notifications every (days)</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Anti-spam outbound policy (Default)</td>
+    </tr>
+    <tr>
+      <td>Set an external message limit</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Set an internal message limit</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Set a daily message limit</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Restriction placed on users who reach the message limit</td>
+      <td>Restrict the user from sending mail until the following day</td>
+    </tr>
+    <tr>
+      <td>Automatic forwarding rules</td>
+      <td>Automatic - System-controlled</td>
+    </tr>
+    <tr>
+      <td>Notifications</td>
+      <td>Unchecked</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="anti-malware">Anti-malware</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 security &gt; Policies &amp; rules &gt; Threat policies &gt; Anti-malware</code></p>
+
+<p>The following table describes the Malware Filter configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Default (Default)</td>
+    </tr>
+    <tr>
+      <td>Enable the common attachements filter</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Filter file types</td>
+      <td>ace,ani,app,exe,jar,reg,scr,vbe,vbs</td>
+    </tr>
+    <tr>
+      <td>Enable zero-hour auto purge for malware</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Admin notifications (internal senders)</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Admin notifications (external senders)</td>
+      <td>Checked</td>
+    </tr>
+    <tr>
+      <td>Admin email address</td>
+      <td>Agency defined</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="microsoft-teams">Microsoft Teams</h2>
+
+<p>The ABAC settings for Microsoft Teams can be found below for all implementation types. This includes the Client Configuration, Channels Policy, Calling Policy, Meetings Policy, Messaging Policy, and Guest Meeting/Calling/Messaging configuration.</p>
+
+<p>Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<h3 id="client-configuration">Client configuration</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams admin center &gt; Teams &gt; Teams settings</code></p>
+
+<p>The following table describes the Teams configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Suggested feeds can appear in a user’s activity feed</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Tags are managed by</td>
+      <td>Team Owners</td>
+    </tr>
+    <tr>
+      <td>Let team owners override who can manage tags</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Let custom tags to be created</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Allow Shifts app to apply tags</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Allow users to send emails to a channel email address</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Accept channel email from these SMTP domains</td>
+      <td>Agency defined</td>
+    </tr>
+    <tr>
+      <td>Citrix files</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>DropBox</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Box</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Google Drive</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Egnyte</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Show Organization tab in chats</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Require a secondary form of authentication to access meeting content</td>
+      <td>No access</td>
+    </tr>
+    <tr>
+      <td>Set Content PIN</td>
+      <td>Required for outside scheduled meeting</td>
+    </tr>
+    <tr>
+      <td>Surface Hub accounts can send mails</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Scope directory search using an Exchange address book policy</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Role-base chat permissions</td>
+      <td>Off</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="teams-policy">Teams policy</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams admin center &gt; Teams &gt; Teams policies</code></p>
+
+<p>The following table describes the Teams policy configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Global (Org-wide default)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Not configured</td>
+    </tr>
+    <tr>
+      <td>Create private channels</td>
+      <td>True</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="teams-apps">Teams apps</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams admin center &gt; Teams apps &gt; Permission policies</code></p>
+
+<p>The following table describes the Teams apps configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Global (Org-wide default)</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Not configured</td>
+    </tr>
+    <tr>
+      <td>Microsoft apps</td>
+      <td>Allow all apps</td>
+    </tr>
+    <tr>
+      <td>Third-party apps</td>
+      <td>Block all apps</td>
+    </tr>
+    <tr>
+      <td>Custom apps</td>
+      <td>Block all apps</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="calling-policy">Calling policy</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams admin center &gt; Voice &gt; Calling policies</code></p>
+
+<p>The following tables describes the Teams Calling policy configuration settings for all implementation types.</p>
+
+<p>Note, policies that are not configurable are not included below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Global</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Not Configured</td>
+    </tr>
+    <tr>
+      <td>Make private calls</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Cloud recording for calling</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Call forwarding and simultaneous ringing to people in your organization</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Call forwarding and simultaneous ringing to external phone numbers</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Voicemail is available for routing inbound calls</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Inbound calls can be routed to call groups</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Delegation for inbound and outbound calls</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Prevent toll bypass and send calls through the PSTN</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Music on hold for PSTN callers</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Busy on busy when in a call</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Web PSTN calling</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Real-time captions in Teams calls</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Automatically answer incoming meeting invites</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>SIP devices can be used to perform calling</td>
+      <td>Off</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="meeting-policy">Meeting policy</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams Admin center &gt; Meetings &gt; Meeting policies</code></p>
+
+<p>The following table describes the Teams Meeting policy configuration settings for all implementation types.</p>
+
+<p>Note, policies that are not configurable are not included below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Global</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Not Configured</td>
+    </tr>
+    <tr>
+      <td>Meet now in channels</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Outlook add-in</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Channel meeting scheduling</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Private meeting scheduling</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Engagement report</td>
+      <td>Enabled</td>
+    </tr>
+    <tr>
+      <td>Meeting registration</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Who can register</td>
+      <td>Everyone</td>
+    </tr>
+    <tr>
+      <td>Mode for IP audio</td>
+      <td>Outgoing and incoming audio enabled</td>
+    </tr>
+    <tr>
+      <td>Mode for IP video</td>
+      <td>Outgoing and incoming video enabled</td>
+    </tr>
+    <tr>
+      <td>IP video</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Local broadcasting</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Media bit rate (Kbs)</td>
+      <td>50000</td>
+    </tr>
+    <tr>
+      <td>Network configuration lookup</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Transcription</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Cloud recording</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Meetings automatically expire</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Default expiration time</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>Store recordings outside of your country or region</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Screen sharing mode</td>
+      <td>Entire screen</td>
+    </tr>
+    <tr>
+      <td>Allow a participant to give or request control</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Allow an external participant to give or request control</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>PowerPoint sharing</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Whiteboard</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Shared notes</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Select video filters</td>
+      <td>All filters</td>
+    </tr>
+    <tr>
+      <td>Let anonymous people join a meeting</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Let anonymous people start a meeting</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Roles that have presenter rights in meetings</td>
+      <td>Everyone, but user can override</td>
+    </tr>
+    <tr>
+      <td>Automatically admit people</td>
+      <td>People in my organization</td>
+    </tr>
+    <tr>
+      <td>Allow dial-in users to bypass the lobby</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Meet now in private meetings</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Live captions</td>
+      <td>Not enabled but the user can override</td>
+    </tr>
+    <tr>
+      <td>Chat in meetings</td>
+      <td>Enabled</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="messaging-policy">Messaging policy</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams Admin center &gt; Messaging policies</code></p>
+
+<p>The following table describes the Teams Messaging policy configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Global</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Global Teams Messaging Policy</td>
+    </tr>
+    <tr>
+      <td>Owners can delete sent messages</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Delete sent messages</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Edit sent messages</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Read receipts</td>
+      <td>User controlled</td>
+    </tr>
+    <tr>
+      <td>Chat</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Giphy in conversations</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Memes in conversations</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Stickers in conversations</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>URL previews</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Translate messages</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Immersive reader for messages</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Send urgent messages using priority notifications</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Create voice messages</td>
+      <td>Allowed in chats and channels</td>
+    </tr>
+    <tr>
+      <td>On mobile devices, display favorite channels above recent chats</td>
+      <td>Not enabled</td>
+    </tr>
+    <tr>
+      <td>Remove users from group chats</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Suggested replies</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Chat permission role</td>
+      <td>Restricted permissions</td>
+    </tr>
+    <tr>
+      <td>Users with full chat permissions can delete any message</td>
+      <td>Off</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="live-events-policies">Live events policies</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams admin center &gt; Meetings &gt; Live events policies</code></p>
+
+<p>The following table describes the Teams Live events policy configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Global (Org-wide default)</td>
+    </tr>
+    <tr>
+      <td>Live events scheduling</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Transcription for attendees</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Who can join scheduled live events</td>
+      <td>Everyone in the organization</td>
+    </tr>
+    <tr>
+      <td>Who can record an event</td>
+      <td>Always record</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="external-access-settings">External access settings</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams admin center &gt; Users &gt; External access</code></p>
+
+<p>The following table describes the External access configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Teams and Skype for Business users in external organizations</td>
+      <td>Allow only specific external domains</td>
+    </tr>
+    <tr>
+      <td>Add a domain (Allowed domains)</td>
+      <td><em>Agency allowed list of domains</em></td>
+    </tr>
+    <tr>
+      <td>Allow users in my organization to communicate with Skype users.</td>
+      <td>On</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="guest-access-settings">Guest access settings</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft Teams Admin center &gt; Org-wide settings &gt; Guest access</code></p>
+
+<p>The following table describes the External access configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Allow guest access in Teams</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Make private calls</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>IP video</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Screen sharing mode</td>
+      <td>Entire screen</td>
+    </tr>
+    <tr>
+      <td>Meet Now</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Edit sent messages</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Delete sent messages</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Chat</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Giphy in conversations</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Memes in conversations</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Stickers in conversations</td>
+      <td>Off</td>
+    </tr>
+    <tr>
+      <td>Immersive reader for messages</td>
+      <td>On</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="sharepoint-online--onedrive">SharePoint Online &amp; OneDrive</h2>
+
+<p>The ABAC settings for the Agency SharePoint Online and OneDrive instances can be found below for all implementation types. This includes the Sharing configuration, Access Control and SharePoint &amp; OneDrive settings. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<h3 id="sharing">Sharing</h3>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Sharing &gt; External Sharing</code></p>
+
+<ul>
+  <li>Content can be shared with:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>SharePoint: New and existing guests
+OneDrive: Only people in your organization
+</code></pre></div>    </div>
+  </li>
+  <li>Limit external sharing by domain:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Agency&gt;.gov.au
+&lt;other trusted Agencies&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Allow only users in specific security groups to share externally: <code class="language-plaintext highlighter-rouge">False</code></li>
+  <li>Guests must sign in using the same account to which sharing invitations are sent: <code class="language-plaintext highlighter-rouge">True</code></li>
+  <li>Allow guests to share items they don’t own: <code class="language-plaintext highlighter-rouge">False</code></li>
+  <li>Guest access to a site or OneDrive will expire automatically after this many minutes: <code class="language-plaintext highlighter-rouge">Not configured</code></li>
+  <li>People who use a verification code must reauthenticate after this many days: <code class="language-plaintext highlighter-rouge">Not configured</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Sharing &gt; File and Folder links</code></p>
+
+<ul>
+  <li>Default link type: <code class="language-plaintext highlighter-rouge">Specific people (only the people the user specifies)</code></li>
+  <li>Default link permission : <code class="language-plaintext highlighter-rouge">Edit</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Sharing &gt; Other settings</code></p>
+
+<ul>
+  <li>Show owners the names of people who viewed their files in OneDrive: <code class="language-plaintext highlighter-rouge">True</code></li>
+  <li>Let site owners choose to display the names of people who viewed files or pages in SharePoint: <code class="language-plaintext highlighter-rouge">True</code></li>
+  <li>Use short links for sharing files and folders : <code class="language-plaintext highlighter-rouge">True</code></li>
+</ul>
+
+<h3 id="access-control">Access control</h3>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Access control &gt; Unmanaged devices</code></p>
+
+<ul>
+  <li>Allow access from unmanaged devices: <code class="language-plaintext highlighter-rouge">Allow full access from desktop apps, mobile apps, and the web</code></li>
+</ul>
+
+<p>Note, restrictions for unmanaged devices are defined by Conditional Access policies as described in the Platform ABAC.</p>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Access control &gt; Idle session sign-out</code></p>
+
+<ul>
+  <li>Sign out inactive users automatically: <code class="language-plaintext highlighter-rouge">On</code></li>
+  <li>Sign out users after:: <code class="language-plaintext highlighter-rouge">1 hours</code></li>
+  <li>Give users this much notice before signing them out: <code class="language-plaintext highlighter-rouge">5 minutes</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Access control &gt; Network location</code></p>
+
+<ul>
+  <li>Allow access only from specific IP address ranges: <code class="language-plaintext highlighter-rouge">Off</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Policies &gt; Access control &gt; Apps that don’t use modern authentication</code></p>
+
+<ul>
+  <li>Allow or block access from applications that don’t user modern authentication: <code class="language-plaintext highlighter-rouge">Block access</code></li>
+</ul>
+
+<h3 id="sharepoint-settings">SharePoint settings</h3>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; SharePoint &gt; Default admin center</code></p>
+
+<ul>
+  <li>Default admin center: <code class="language-plaintext highlighter-rouge">New SharePoint admin center</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; SharePoint &gt; Notifications</code></p>
+
+<ul>
+  <li>Allow notifications: <code class="language-plaintext highlighter-rouge">True</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; SharePoint &gt; Pages</code></p>
+
+<ul>
+  <li>Allow users to create new modern pages: <code class="language-plaintext highlighter-rouge">True</code></li>
+  <li>Allow commenting on modern pages : <code class="language-plaintext highlighter-rouge">True</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; SharePoint &gt; Site creation</code></p>
+
+<ul>
+  <li>Let users create sites from the SharePoint start page and OneDrive: <code class="language-plaintext highlighter-rouge">False</code></li>
+  <li>Create team sites under: <code class="language-plaintext highlighter-rouge">/sites/</code></li>
+  <li>Default time zone : <code class="language-plaintext highlighter-rouge">(UTC+10:00) Canberra, Melbourne, Sydney</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; SharePoint &gt; Site storage limits</code></p>
+
+<ul>
+  <li>Site storage limits: <code class="language-plaintext highlighter-rouge">Automatic</code></li>
+</ul>
+
+<h3 id="onedrive-settings">OneDrive settings</h3>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; OneDrive &gt; Notifications</code></p>
+
+<ul>
+  <li>Allow notifications: <code class="language-plaintext highlighter-rouge">True</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; OneDrive &gt; Retention</code></p>
+
+<ul>
+  <li>Days to retain a deleted user’s OneDrive: <code class="language-plaintext highlighter-rouge">365</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; OneDrive &gt; Default storage limit</code></p>
+
+<ul>
+  <li>Default storage limit : <code class="language-plaintext highlighter-rouge">1024 GB</code></li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">SharePoint admin center &gt; Settings &gt; OneDrive &gt; Sync</code></p>
+
+<ul>
+  <li>Show the Sync button on the OneDrive website: <code class="language-plaintext highlighter-rouge">True</code></li>
+  <li>Allow syncing only on computers joined to specific domains: <code class="language-plaintext highlighter-rouge">False</code></li>
+  <li>Block upload of specific file types: <code class="language-plaintext highlighter-rouge">False</code></li>
+</ul>
+
+<h2 id="security-and-compliance">Security and compliance</h2>
+
+<p>The ABAC settings for the Agency Office 365 Security and Compliance instance can be found below. This includes the Alerts, Labels, Data Loss Prevention, Retention Policies, Audit Logging, and Customer Key configuration. Please note, if a setting is not mentioned in the below, it should be assumed to have been left at its default setting.</p>
+
+<h3 id="audit-logging">Audit logging</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 compliance &gt; Audit &gt; Audit retention policies</code></p>
+
+<ul>
+  <li>Enabled: <code class="language-plaintext highlighter-rouge">True</code></li>
+  <li>Policy name: <code class="language-plaintext highlighter-rouge">10 year audit log</code></li>
+  <li>Policy description: <code class="language-plaintext highlighter-rouge">Retains all audit log records for 10 years</code></li>
+  <li>Record Type: <code class="language-plaintext highlighter-rouge">All</code></li>
+  <li>Duration: <code class="language-plaintext highlighter-rouge">10 years</code></li>
+  <li>Priority: <code class="language-plaintext highlighter-rouge">1</code></li>
+</ul>
+
+<h3 id="retention-policies">Retention policies</h3>
+
+<p>Note, retention policies should not be used in place of an adequate backup solution.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 compliance &gt; Information governance &gt; Labels</code></p>
+
+<p>The following table describes the Retention labels configuration settings for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Teams Channel messages Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Policy Name</td>
+      <td>Teams Channel Message Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Teams Channel Message Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Applies to content in these locations</td>
+      <td>Teams channel messages</td>
+    </tr>
+    <tr>
+      <td>Retention period</td>
+      <td>Keep content forever</td>
+    </tr>
+    <tr>
+      <td>Turn on preservation lock</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>Microsoft 365 groups Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Policy Name</td>
+      <td>Office 365 Group Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Office 365 Group Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Applies to content in these locations</td>
+      <td>Microsoft 365 groups – All Groups</td>
+    </tr>
+    <tr>
+      <td>Retention period</td>
+      <td>Keep content forever</td>
+    </tr>
+    <tr>
+      <td>Turn on preservation lock</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>Exchange Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Policy Name</td>
+      <td>Exchange Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Exchange Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Applies to content in these locations</td>
+      <td>Exchange email – All users included<br />Exchange Public Folders</td>
+    </tr>
+    <tr>
+      <td>Retention period</td>
+      <td>Keep content forever</td>
+    </tr>
+    <tr>
+      <td>Turn on preservation lock</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>Teams chats Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Policy Name</td>
+      <td>Teams chats Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Teams chats Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Applies to content in these locations</td>
+      <td>Teams chats messages – All users included</td>
+    </tr>
+    <tr>
+      <td>Retention period</td>
+      <td>Keep content forever</td>
+    </tr>
+    <tr>
+      <td>Turn on preservation lock</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>OneDrive Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Policy Name</td>
+      <td>OneDrive Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>OneDrive Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Applies to content in these locations</td>
+      <td>OneDrive accounts - All</td>
+    </tr>
+    <tr>
+      <td>Retention period</td>
+      <td>Keep content forever</td>
+    </tr>
+    <tr>
+      <td>Turn on preservation lock</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>SharePoint Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>On</td>
+    </tr>
+    <tr>
+      <td>Policy Name</td>
+      <td>SharePoint Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>SharePoint Indefinite Hold</td>
+    </tr>
+    <tr>
+      <td>Applies to content in these locations</td>
+      <td>SharePoint Sites – All Sites</td>
+    </tr>
+    <tr>
+      <td>Retention period</td>
+      <td>Keep content forever</td>
+    </tr>
+    <tr>
+      <td>Turn on preservation lock</td>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="retention-labels">Retention labels</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 compliance &gt; Information governance &gt; Labels</code></p>
+
+<p>Not configured.</p>
+
+<h3 id="sensitivity-labels">Sensitivity labels</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 compliance &gt; Information protection &gt; Labels</code></p>
+
+<p>The following tables describe the sensitivity label configuration settings for all implementation types. Only create and publish labels that are required for the agency.</p>
+
+<p>The sensitivity labels in this ABAC can be deployed through M365DSC automation. The process can be found within the <a href="/blueprint/automation.html">automation</a> guide.</p>
+
+<p>Note, labels <strong>OFFICIAL Sensitive</strong> and <strong>PROTECTED</strong> have a number of sub-labels to cater for DLMs in the PSPF. Both main labels will be presented as a group object but are not selectable as a user at the top level. They will also appear as a sub-label that is selectable under the group. This ensures that the sensitivity label selection is easier when dealing with a large number of DLM combinations. The following figure is an example of the configuration panel in the Microsoft 365 compliance portal.</p>
+
+<p><img src="/assets/images/abac/sensitivity-labels.png" alt="M365 compliance labels" /></p>
+
+<h4 id="unofficial">UNOFFICIAL</h4>
+
+<p>The following table lists the sensitivity label configuration for UNOFFICIAL.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>U</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>UNOFFICIAL</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>No damage. This information does not form part of official duty.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: UNOFFICIAL<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: UNOFFICIAL<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="official">OFFICIAL</h4>
+
+<p>The following table lists the sensitivity label configuration for OFFICIAL.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OFFICIAL</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>OFFICIAL</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>No or insignificant damage. This is the majority of routine information.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="official-sensitive-group">OFFICIAL: Sensitive (Group)</h4>
+
+<p>The following table lists the sensitivity label configuration for OFFICIAL Sensitive. This top-level object forms the grouping that all OFFICIAL Sensitive labels are a sub label for.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS group</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>OFFICIAL Sensitive</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="official-sensitive">OFFICIAL: Sensitive</h4>
+
+<p>The following table lists the sensitivity label configuration for OFFICIAL Sensitive.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>OFFICIAL Sensitive</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//Legal-Privilege.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS LP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>Legal-Privilege</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive // Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//Legislative-Secrecy</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS LS</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>Legislative Secrecy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//Personal-Privacy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS PP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>Personal-Privacy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive //Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//NATIONAL CABINET.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS NC</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>NATIONAL CABINET</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//NATIONAL CABINET//Legal-Privilege.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS NC LP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>NATIONAL CABINET - Legal-Privilege</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//NATIONAL CABINET//Legislative-Secrecy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>OS NC LS</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>NATIONAL CABINET - Legislative-Secrecy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for OFFICIAL: Sensitive//NATIONAL CABINET//Personal-Privacy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>NATIONAL CABINET - Personal-Privacy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>Low to medium business impact. Limited damage <br />to an individual, organisation or government generally if compromised</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: OFFICIAL: Sensitive//NATIONAL CABINET//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>OS group</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="protected-group">PROTECTED (Group)</h4>
+
+<p>The following table lists the sensitivity label configuration for PROTECTED. This top-level object forms the grouping that all PROTECTED labels are a sub label for.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P group</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>PROTECTED</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity label configuration for PROTECTED.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>PROTECTED</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//Legal-Privilege.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P LP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>Legal-Privilege</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//Legal-Privilege <br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//Legislative-Secrecy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P LS</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>Legislative-Secrecy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//Personal-Privacy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P PP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>Personal-Privacy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//NATIONAL CABINET.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>NATIONAL CABINET</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//NATIONAL CABINET<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//NATIONAL CABINET<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//NATIONAL CABINET//Legal-Privilege.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P NC LP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>NATIONAL CABINET - Legal-Privilege</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//NATIONAL CABINET//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//NATIONAL CABINET//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//NATIONAL CABINET//Legislative-Secrecy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P NC LS</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>NATIONAL CABINET - Legislative-Secrecy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//NATIONAL CABINET//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//NATIONAL CABINET//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//NATIONAL CABINET//Personal-Privacy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P NC PP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>NATIONAL CABINET - Personal-Privacy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//NATIONAL CABINET//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//NATIONAL CABINET//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//CABINET.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P C</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>CABINET</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//CABINET<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//CABINET<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//CABINET//Legal-Privilege.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P C LP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>CABINET - Legal-Privilege</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//CABINET//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//CABINET//Legal-Privilege<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//CABINET//Legislative-Secrecy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P C LS</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>PROTECTED//CABINET//Legislative-Secrecy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//CABINET//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//CABINET//Legislative-Secrecy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The following table lists the sensitivity sub label configuration for PROTECTED//CABINET//Personal-Privacy.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>P C PP</td>
+    </tr>
+    <tr>
+      <td>Display Name</td>
+      <td>CABINET - Personal-Privacy</td>
+    </tr>
+    <tr>
+      <td>Description for users</td>
+      <td>High business impact. Damage to the national<br /> interest, organisations or individuals.</td>
+    </tr>
+    <tr>
+      <td>Scope</td>
+      <td>Files &amp; Emails</td>
+    </tr>
+    <tr>
+      <td>Protection Settings</td>
+      <td>Mark the content of files: Checked<br />Content marking: Checked<br />Apply a header: Checked<br />Customize text: PROTECTED//CABINET//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center<br />Apply a footer: Checked<br />Customize text: PROTECTED//CABINET//Personal-Privacy<br />Font site: 12<br />Font color: Red<br />Align text: Center</td>
+    </tr>
+    <tr>
+      <td>Sub Label of</td>
+      <td>P group</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="sensitivity-label-policy">Sensitivity label policy</h3>
+
+<p>Please note, the user may only need to publish the sensitivity labels (sensitivity, security classification, information management markers and caveats) that are required for the organisation or agency.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 compliance &gt; Information protection &gt; Label policies</code></p>
+
+<p>The following table lists the Sensitivity label policy configuration for all implementation types.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Configuration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Name</td>
+      <td>Sensitivity labels policy</td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td>Default sensitivity labels based on <a href="https://www.protectivesecurity.gov.au/system/files/2021-11/pspf-policy-8-sensitive-and-classified-information.pdf">PSPF infosec document</a></td>
+    </tr>
+    <tr>
+      <td>Published Labels</td>
+      <td>UNOFFICIAL<br />OFFICIAL<br />OFFICIAL Sensitive<br />OFFICIAL Sensitive/OFFICIAL Sensitive<br />OFFICIAL Sensitive/Legal-Privilege<br />OFFICIAL Sensitive/Legislative-Secrecy<br />OFFICIAL Sensitive/Personal-Privacy<br />OFFICIAL Sensitive/NATIONAL CABINET<br />OFFICIAL Sensitive/NATIONAL CABINET - Legal-Privilege<br />OFFICIAL Sensitive/NATIONAL CABINET - Legislative-Secrecy<br />OFFICIAL Sensitive/NATIONAL CABINET - Personal-Privacy<br />PROTECTED<br />PROTECTED/PROTECTED<br />PROTECTED/Legal-Privilege<br />PROTECTED/Legislative-Secrecy<br />PROTECTED/Personal-Privacy<br />PROTECTED/NATIONAL CABINET<br />PROTECTED/NATIONAL CABINET - Legal-Privilege<br />PROTECTED/NATIONAL CABINET - Legislative-Secrecy<br />PROTECTED/NATIONAL CABINET - Personal-Privacy<br />PROTECTED/CABINET<br />PROTECTED/CABINET - Legal-Privilege<br />PROTECTED/CABINET - Legislative-Secrecy<br />PROTECTED/CABINET - Personal-Privacy</td>
+    </tr>
+    <tr>
+      <td>Published to</td>
+      <td>All</td>
+    </tr>
+    <tr>
+      <td>Policy settings</td>
+      <td>Users must provide a justification to remove a label or lower its classification: Checked<br />Require users to apply a label to their emails and documents: Checked</td>
+    </tr>
+    <tr>
+      <td>Default label</td>
+      <td>Apply this default label to documents: None<br />Apply this default label to emails: None<br />Require users to apply a label to their emails: Checked<br />Apply this default label to Power BI content: None</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="data-loss-prevention-dlp-compliance-policy">Data Loss Prevention (DLP) compliance policy</h3>
+
+<p>The ABAC settings for the initial Data Loss Prevention configuration for all implementation types can be found below. Additional Sensitive information types and policies specific to the Agency’s requirements should be configured, the following are a baseline configuration.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 compliance &gt; Data loss prevention &gt; Policies</code></p>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Australia Privacy Act</code>
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Description: <code class="language-plaintext highlighter-rouge">Helps detect the presence of information commonly considered to be subject to the privacy act in Australia, like driver's license and passport number.</code></li>
+      <li>Content Types: <code class="language-plaintext highlighter-rouge">Australian Driver's License number, Australian Passport Number</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>Exchange email: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>SharePoint site: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>OneDrive accounts: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>Teams chat and channel messages: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+        </ul>
+      </li>
+      <li>Policy settings:
+        <ul>
+          <li>Low volume: <code class="language-plaintext highlighter-rouge">Low volume of content detected Australia Privacy Act (default template)</code></li>
+          <li>High volume: <code class="language-plaintext highlighter-rouge">High volume of content detected Australia Privacy Act (default template)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Australia Personally Identifiable Information (PII) Data</code>
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Description: <code class="language-plaintext highlighter-rouge">Helps detect the presence of information commonly considered to be personally identifiable information (PII) in Australia, like tax file number and driver's license.</code></li>
+      <li>Content Types: <code class="language-plaintext highlighter-rouge">Australian Driver's License number, Australian Tax File Number</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>Exchange email: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>SharePoint site: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>OneDrive accounts: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>Teams chat and channel messages: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+        </ul>
+      </li>
+      <li>Policy settings:
+        <ul>
+          <li>Low volume: <code class="language-plaintext highlighter-rouge">Low volume of content detected Australia Personally Identifiabl (default template)</code></li>
+          <li>High volume: <code class="language-plaintext highlighter-rouge">High volume of content detected Australia Personally Identifiab (default template)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Australia Health Records Act (HRIP Act)</code>
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Description: <code class="language-plaintext highlighter-rouge">Helps detect the presence of information commonly considered to be subject to the Health Records and Information Privacy (HRIP) act in Australia, like medical account number and tax file number.</code></li>
+      <li>Content Types: <code class="language-plaintext highlighter-rouge">Australian Tax File Number, Australian Medical Account Number</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>Exchange email: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>SharePoint site: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>OneDrive accounts: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>Teams chat and channel messages: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+        </ul>
+      </li>
+      <li>Policy settings:
+        <ul>
+          <li>Low volume: <code class="language-plaintext highlighter-rouge">Low volume of content detected Australia Health Records Act (HR (default template)</code></li>
+          <li>High volume: <code class="language-plaintext highlighter-rouge">High volume of content detected Australia Health Records Act (H (default template)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Australian Financial Data</code>
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Workload: <code class="language-plaintext highlighter-rouge">Helps detect the presence of information commonly considered to be financial data in Australia, including credit cards, and SWIFT codes.</code></li>
+      <li>Content Types: <code class="language-plaintext highlighter-rouge">SWIFT Code, Australian Tax File Number, Australian Bank Account Number, Credit Card Number</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>Exchange email: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>SharePoint site: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>OneDrive accounts: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>Teams chat and channel messages: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+        </ul>
+      </li>
+      <li>Policy settings:
+        <ul>
+          <li>Low volume: <code class="language-plaintext highlighter-rouge">Low volume of content detected Australia Financial Data (default template)</code></li>
+          <li>High volume: <code class="language-plaintext highlighter-rouge">High volume of content detected Australia Financial Data (default template)</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">PROTECTED Data</code>
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Description: <code class="language-plaintext highlighter-rouge">Custom DLP policy to detect the sharing of data with PROTECTED sensitivity labels applied.</code></li>
+      <li>Content Types: <code class="language-plaintext highlighter-rouge">PROTECTED (Sensitivity labels)</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>SharePoint site: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+          <li>OneDrive accounts: <code class="language-plaintext highlighter-rouge">All, no exclusions</code></li>
+        </ul>
+      </li>
+      <li>Policy settings: <code class="language-plaintext highlighter-rouge">PROTECTED Data Shared (custom rule)</code></li>
+    </ul>
+  </li>
+  <li>Name: <code class="language-plaintext highlighter-rouge">&lt;classification&gt; Append Subject</code> Note, create a single DLP policy for each classification or DLM published
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Description: <code class="language-plaintext highlighter-rouge">Custom DLP policy to detect the sharing of data with PROTECTED sensitivity labels applied.</code></li>
+      <li>Content Types: <code class="language-plaintext highlighter-rouge">Sensitivy info type for &lt;classification&gt;</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>Exchange</li>
+        </ul>
+      </li>
+      <li>Policy settings: <code class="language-plaintext highlighter-rouge">Actions</code>
+        <ul>
+          <li>Modify the Subject: <code class="language-plaintext highlighter-rouge">Replacement text: [SEC=&lt;Classification&gt;]</code></li>
+          <li>Replacement strategy: <code class="language-plaintext highlighter-rouge">append</code></li>
+          <li>Patterns: <code class="language-plaintext highlighter-rouge">\[SEC=.*?\]</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="auto-labelling-policy">Auto-labelling policy</h3>
+
+<p>The ABAC settings for the initial Auto-labeling configuration for all implementation types can be found below. The baseline configuration specifies a single auto-labeling policy per classification (sensitivity label).</p>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">&lt;classification&gt; Inbound Marking</code> Note, create an auto-labelling policy for each classification or DLM published
+    <ul>
+      <li>Status: <code class="language-plaintext highlighter-rouge">On</code></li>
+      <li>Description: <code class="language-plaintext highlighter-rouge">Custom auto-labelling policy to detect the email marked with &lt;clasification&gt; and add the appropriate Senstivity label.</code></li>
+      <li>Locations to apply the policy:
+        <ul>
+          <li>Exchange</li>
+        </ul>
+      </li>
+      <li>Policy rules: <code class="language-plaintext highlighter-rouge">Conditions</code>
+        <ul>
+          <li>Recipient domain is <code class="language-plaintext highlighter-rouge">agency.gov.au</code></li>
+          <li>Header matches patterns <code class="language-plaintext highlighter-rouge">\SEC=&lt;classification&gt;</code></li>
+        </ul>
+      </li>
+      <li>Choose label to auto-apply: <code class="language-plaintext highlighter-rouge">&lt;Classification&gt;</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="microsoft-365-defender">Microsoft 365 Defender</h2>
+
+<p>The ABAC settings for Microsoft 365 Defender for all implementation types can be found below. This includes Safe Links, Safe Attachments, and Anti-phishing configuration.</p>
+
+<p>Please note, if a setting is not mentioned below, it should be assumed to have been left at its default setting.</p>
+
+<h3 id="safe-links">Safe Links</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 Defender &gt; Policy &amp; rules &gt; Threat policies &gt; Safe links</code></p>
+
+<h4 id="global-settings">Global Settings</h4>
+
+<ul>
+  <li>Use Safe Links in Office 365 apps: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+  <li>Do not track when users click protected links in Office 365 apps: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+  <li>Do not let users click through to the original URL in Office 365 app: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+</ul>
+
+<h4 id="policy">Policy</h4>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Default Safe Links Policy</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">This policy is the default Safe Links policy for the environment</code></li>
+  <li>Users and domains:
+    <ul>
+      <li>Users: <code class="language-plaintext highlighter-rouge">Not Configured</code></li>
+      <li>Groups: <code class="language-plaintext highlighter-rouge">Not Configured</code></li>
+      <li>Domains: <code class="language-plaintext highlighter-rouge">All Agency domains</code></li>
+    </ul>
+  </li>
+  <li>Protection Settings:
+    <ul>
+      <li>Select the action for unknown potentially malicious URLs in messages: <code class="language-plaintext highlighter-rouge">On - URLs will be rewritten and checked against a list of known malicious links when user clicks on the link</code></li>
+      <li>Select the action for unknown or potentially malicious URLs within Microsoft Teams: <code class="language-plaintext highlighter-rouge">On - Microsoft Teams will check against a list of known malicious links when user clicks on the link; URLs will not be rewritten</code></li>
+      <li>Apply real-time URL scanning for suspicious links and links that point to files: <code class="language-plaintext highlighter-rouge">Enabled</code>
+        <ul>
+          <li>Wait for URL scanning to complete before delivering the message: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+        </ul>
+      </li>
+      <li>Apply Safe Links to email messages sent within the organisation: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Do not track user clicks: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+      <li>Do not let users click through to the original URL: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Display the organization branding on notification and warning pages: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+      <li>Do not rewrite the following URLs: <code class="language-plaintext highlighter-rouge">Not Configured</code></li>
+    </ul>
+  </li>
+  <li>Notification:
+    <ul>
+      <li>How would you like to notify your users: <code class="language-plaintext highlighter-rouge">Use the default notification text</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="safe-attachments">Safe Attachments</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 Defender &gt; Policy &amp; rules &gt; Threat policies &gt; Safe Attachments</code></p>
+
+<h4 id="global-settings-1">Global Settings</h4>
+
+<ul>
+  <li>Turn on Defender for Office 365 for SharePoint, OneDrive, and Microsoft Teams: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+  <li>Turn on Safe Documents for Office Clients: <code class="language-plaintext highlighter-rouge">Enabled</code>
+    <ul>
+      <li>Allow people to click through Protected View even if Safe Documents has identified the file as malicious: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="policy-1">Policy</h4>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Default Safe Attachments Policy</code></li>
+  <li>Description: <code class="language-plaintext highlighter-rouge">This policy is the default Safe Attachments policy for the environment</code></li>
+  <li>Users and domains:
+    <ul>
+      <li>Users: <code class="language-plaintext highlighter-rouge">Not Configured</code></li>
+      <li>Groups: <code class="language-plaintext highlighter-rouge">Not Configured</code></li>
+      <li>Domains: <code class="language-plaintext highlighter-rouge">All Agency domains</code></li>
+    </ul>
+  </li>
+  <li>Settings:
+    <ul>
+      <li>Safe Attachments unknown malware response: <code class="language-plaintext highlighter-rouge">Block - Block current and future messages and attachments with detected malware</code></li>
+      <li>Enable Redirect: <code class="language-plaintext highlighter-rouge">Disabled</code>
+        <ul>
+          <li>Send messages that contain blocked, monitored, or replaced attachments to the specified email address: <code class="language-plaintext highlighter-rouge">Agency defined</code></li>
+        </ul>
+      </li>
+      <li>Apply the Safe Attachments detection response if scanning can’t complete (timeout or errors): <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="anti-phishing">Anti-phishing</h3>
+
+<p><code class="language-plaintext highlighter-rouge">Microsoft 365 Defender &gt; Policy &amp; rules &gt; Threat policies &gt; Anti-phishing</code></p>
+
+<ul>
+  <li>Name: <code class="language-plaintext highlighter-rouge">Office365 AntiPhish Default (Default)</code></li>
+  <li>Phishing email threshold: <code class="language-plaintext highlighter-rouge">2 - Aggressive</code></li>
+  <li>Enable users to protect: <code class="language-plaintext highlighter-rouge">Configured - Agency executives added</code></li>
+  <li>Enabled domains to protect: <code class="language-plaintext highlighter-rouge">Enabled</code>
+    <ul>
+      <li>Include domains I own: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Include custom domains: <code class="language-plaintext highlighter-rouge">Disabled</code></li>
+    </ul>
+  </li>
+  <li>Add trusted senders and domains: <code class="language-plaintext highlighter-rouge">Not configured</code></li>
+  <li>Enable mailbox intelligence: <code class="language-plaintext highlighter-rouge">Enabled</code>
+    <ul>
+      <li>Enable Intelligence for impersonation protection: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+    </ul>
+  </li>
+  <li>Spoof
+    <ul>
+      <li>Enable spoof intelligence: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+    </ul>
+  </li>
+  <li>Actions
+    <ul>
+      <li>Message actions
+        <ul>
+          <li>If message is detected as an impersonated user:<code class="language-plaintext highlighter-rouge">Quarantine the message</code></li>
+          <li>If message is detected as an impersonated domain: <code class="language-plaintext highlighter-rouge">Quarantine the message</code></li>
+          <li>If Mailbox Intelligence detects an impersonated user: <code class="language-plaintext highlighter-rouge">Quarantine the message</code></li>
+          <li>If message is detected as spoof: <code class="language-plaintext highlighter-rouge">Quarantine the message</code></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Safety tips &amp; indicators
+    <ul>
+      <li>Show first contact safety tip (Recommended): <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Show user impersonation safety tip: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Show domain impersonation safety tip: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Show user impersonation unusual characters safety tip: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Show (?) for unauthenticated senders for spoof: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+      <li>Show “via” tag: <code class="language-plaintext highlighter-rouge">Enabled</code></li>
+    </ul>
+  </li>
+</ul>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>

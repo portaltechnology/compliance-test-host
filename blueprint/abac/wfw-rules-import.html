@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows Firewall rules import</title>
+<meta name="description" content="The following guide provides instructions to automate the import of Windows Firewall rules directly into Intune Windows Firewall rule policies from a reference computer. The following is guidance from the Australian Cyber Security Centre (ACSC) for software firewalls: A software...">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="canonical" href="/blueprint/abac/wfw-rules-import.html">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/images/favicons/favicon-194x194.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicons/favicon-16x16.png">
+<meta property="og:image" content="https://desktop.gov.au/assets/images/dta-opengraph.png"/>
+<meta property="og:title" content="Windows Firewall rules import">
+<meta property="og:description" content="The following guide provides instructions to automate the import of Windows Firewall rules directly into Intune Windows Firewall rule policies from a reference computer. The following is guidance from the Australian Cyber Security Centre (ACSC) for software firewalls: A software...">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+</head>
+<body class="au-grid" data-spy="scroll" data-target="#toc-container">
+<nav class="au-skip-link">
+    <a class="au-skip-link__link" href="#content">Skip to main content</a>
+    <a class="au-skip-link__link" href="#mainmenu">Skip to main navigation</a>
+</nav>
+
+<header class="au-header au-header--dark" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="logo col-md-8">
+                <a href="/">
+                    <img class="hidden-print" alt="Australian Government Digital Transformation Agency logo" src="/assets/images/dta.svg" data-fallback="/assets/images/dta-300.png">
+                    <h1><Company Name> - <Security Controls, ie Essential 8, Maturity 1></h1>
+                </a>
+            </div>
+        </div>
+    </div>
+    <nav class="au-main-nav au-main-nav--dark hidden-print" aria-label="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="main-nav-default" class="au-main-nav__content">
+                    <button
+                        aria-controls="main-nav-default"
+                        class="au-main-nav__toggle au-main-nav__toggle--open"
+                        onClick="return AU.mainNav.Toggle( this )">
+                        Menu
+                    </button>
+                    <div class="au-main-nav__menu">
+                        <div class="au-main-nav__menu-inner">
+                            <div class="au-main-nav__focus-trap-top"></div>
+                            <button
+                                aria-controls="main-nav-default"
+                                class="au-main-nav__toggle au-main-nav__toggle--close"
+                                onClick="return AU.mainNav.Toggle( this )">
+                                Close
+                            </button>
+                            <ul class="au-link-list">
+                                <li><a href="/">Home</a></li>
+                                <li class=""><a href="/blueprint/index.html">Blueprint</a></li>
+                                
+                            </ul>
+                            <div class="au-main-nav__focus-trap-bottom"></div>
+                        </div>
+                    </div>
+                    <div
+                        class="au-main-nav__overlay"
+                        aria-controls="main-nav-default"
+                        onClick="return AU.mainNav.Toggle( this )">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+</header>
+
+<main class="main" id="content" aria-label="Content">
+    <section class="au-body">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-12 d-flex">
+                    <div id="lhs" class="hidden-print">
+                        <aside class="au-side-nav au-accordion" aria-label="side navigation">
+                            <button 
+                                class="au-side-nav__toggle au-accordion__title au-accordion--closed" 
+                                aria-controls="sidebar-nav-container"
+                                aria-expanded="false"  
+                                onclick="return AU.accordion.Toggle( this )"
+                            >
+                                In this section
+                            </button>
+                            <div id="sidebar-nav-container" class="au-side-nav__content au-accordion--closed au-accordion__body">
+                                
+                                    
+                                    <ul class="au-link-list">
+                                        <li class="sidenav-title "><a href="/blueprint/abac.html">As Built As Configured</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/conditional-access-policies.html">Conditional access policies</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-applications.html">Intune applications</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-compliance.html">Intune compliance</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-configuration.html">Intune configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-enrolment.html">Intune enrolment</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/intune-software-updates.html">Intune software updates</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/office-365.html">Office 365</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/platform.html">Platform</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-task-sequence.html">Hybrid - task sequence deploy</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/hybrid-network-configuration.html">Hybrid - network configuration</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/admin-disable-inactive-users.html">Administration - disable inactive accounts automation</a>
+                                            
+                                        </li>
+                                        
+                                        <li><a href="/blueprint/abac/wdac-policy-creation.html">WDAC policy creation</a>
+                                            
+                                        </li>
+                                        
+                                        <li class="active"><a href="/blueprint/abac/wfw-rules-import.html">Windows Firewall rules import</a>
+                                            
+                                            <nav class="navbar" id="toc-container">
+                                                
+                                            </nav>
+                                            
+                                        </li>
+                                        
+                                        
+                                    </ul>
+                                    
+                                
+                            </div>
+                        </aside>
+                    </div>
+                    <div id="content-area">
+                        <h1>Windows Firewall rules import</h1>
+                        <div class="metadata">
+                            <ul>
+                                <li>
+
+
+2 minutes
+
+to read</li>
+                                <li>17 July 2023</li>
+                                
+                            </ul>
+                        </div>
+                        <p>The following guide provides instructions to automate the import of Windows Firewall rules directly into Intune Windows Firewall rule policies from a reference computer.</p>
+
+<p>The following is guidance from the Australian Cyber Security Centre (ACSC) for software firewalls:</p>
+
+<ul>
+  <li>A software firewall is implemented on workstations and servers to limit both inbound and outbound network connections (<strong>ISM</strong> security control 1416)</li>
+</ul>
+
+<p>Simply enabling and enforcing the Windows Firewall through policy does not cover the full intent of the ISM control. It is recommended that a reference computer is used to capture the required rules to allow normal Windows desktop function, and also include any additional Windows Firewall rules (inbound and outbound) that may be required for agency specific applications and services.</p>
+
+<p>This process uses the <a href="https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security-firewall-rule-tool">Endpoint security firewall rule migration tool for Microsoft Intune</a> which is a PowerShell script provided by Microsoft.</p>
+
+<h2 class="no_toc" id="rule-import">Rule import</h2>
+
+<p>The import process requires a clean Windows desktop which will be used as reference computer to export the firewall rules. The Windows build version should be the same as the target operating system. This reference machine is ideally a virtual machine, however if it is physical please ensure it is clear of any OEM or third-party software. The reference machine should not be Intune enrolled or Azure AD joined.</p>
+
+<p>The administrator performing this technical instruction requires the <code class="language-plaintext highlighter-rouge">Intune Administrator</code> Azure AD role.</p>
+
+<ol>
+  <li>Login to the device with local administrator privileges.</li>
+  <li>Download the <a href="https://docs.microsoft.com/en-us/mem/intune/protect/endpoint-security-firewall-rule-tool">migration tool</a> and extract the contents to a local directory.</li>
+  <li>Open a PowerShell console as an administrator, navigate to the directory where the migration tool was extracted to and execute the following:
+    <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">.</span><span class="n">\Export-FirewallRules.ps1</span><span class="w"> </span><span class="nt">-includeLocalRules</span><span class="w">
+</span></code></pre></div>    </div>
+    <ul>
+      <li>Note, if the ruleset is being migrated from an existing group policy applied to a hybrid device, omit the <code class="language-plaintext highlighter-rouge">-includeLocalRules</code> parameter on the script which will only import rules found that are applied by group policy.</li>
+    </ul>
+  </li>
+  <li>The script will prompt for a profile name. Provide a profile name, this will be the name of the Windows Firewall policy.
+    <ul>
+      <li>Note, as the total limit of individual rules allowed per policy is 150, the rules will be spread over a number of policies (e.g. policy-0, policy-1)</li>
+    </ul>
+  </li>
+  <li>The script will prompt for Azure AD credentials. Provide the appropriate credentials and grant permission when prompted.</li>
+  <li>Navigate to <code class="language-plaintext highlighter-rouge">Microsoft Endpoint Manager &gt; Firewall</code> and review the policies created. Review the rules and remove any unwanted or duplicates.</li>
+  <li>Assign the policy to a test group of machines prior to assigning to all devices.</li>
+</ol>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<section class="feedback au-body text-centered">
+    <p>Portal Technology - End Section</p>
+</section>
+
+<footer class="au-footer au-footer--dark au-body au-body--dark hidden-print" role="contentinfo">
+    <div id="back-to-top" class="transition-medium hidden-print">
+        <a href="#top">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708l6-6z"/>
+                <path fill-rule="evenodd" d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+            <br>
+            Back to Top
+        </a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 text-centered" id="dta-initiative">
+                <a href="https://www.dta.gov.au/"><img src="/assets/images/dta-wordmark-white.png" alt="An initiative of the Digital Transformation Agency"></a>
+            </div>
+            <div class="col-sm-10">
+                <nav aria-label="footer">
+                    <!-- <ul class="au-link-list au-link-list--inline">
+                        <li><a href="mailto:protectedutility@dta.gov.au">Contact us</a></li>
+                        <li><a href="https://www.dta.gov.au/our-privacy-policy">Privacy</a></li>
+                        <li><a href="https://www.dta.gov.au/disclaimer-and-copyright">Disclaimer</a></li>
+                        <li><a href="https://www.dta.gov.au/accessibility">Accessibility</a></li>
+                    </ul> -->
+                </nav>
+                <div class="au-footer__end">
+                    <p>This page has been built by Portal Technology based on work provided by the Australian Government.<br> </p>
+                    <p>&copy; Commonwealth of Australia. With the exception of the Commonwealth Coat of Arms and where otherwise noted, this work is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> license.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/assets/js/jquery-3.5.1.slim.min.js"></script>
+<script src="/assets/js/designsystem.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/jquery.tablesorter.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script>const search_client = algoliasearch('', ''); const search_index = search_client.initIndex('');</script>
+<script src="/assets/js/scripts.js"></script>
+</body>
+</html>
